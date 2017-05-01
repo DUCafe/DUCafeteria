@@ -7,16 +7,16 @@
  */
 
 $servername = "localhost";
-$username = "root";
-$password = "102938";
-$dbname = "users
-";
+$username = "ducafe";
+$password = "ducafe_db";
+$dbname = "ducafe";
 
 $db = mysqli_connect($servername, $username, $password, $dbname);
 
 if ($db -> connect_error){
     die("connection failed ".$db->connect_error);
 }
+else echo "Hello";
 
 $retrieve_query = "SELECT * FROM MYTABLE" ;
 $result = $db->query($retrieve_query);

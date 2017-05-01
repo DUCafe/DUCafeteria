@@ -112,7 +112,7 @@ $db->close();*/
                     }
 
                 }
-                xhttp.open("GET", "regUser" +
+                xhttp.open("GET", "regUserDB" +
                     ".php?username1="+name+"&email1="+email+"&password1="+pass1+"&password2="+pass2,
                     true);
 
@@ -136,14 +136,13 @@ $db->close();*/
                         document.getElementById("loginStatus").value = response1;
                         if(String(response1.trim()) === "Success") {
 
-                            window.location.href = "loginUserDB.php";
+                            window.location.href = "welcome.php";
                             //document.getElementById("formlogin").submit();
                         }
                     }
                 }
-                xhttp.open("GET", "loginUser.php?username1="+name+"&password1="+pass, true);
+                xhttp.open("GET", "loginUserDB.php?username1="+name+"&password1="+pass, true);
                 xhttp.send();
-
             }
         }
     </script>
@@ -201,7 +200,7 @@ $db->close();*/
 
 
 
-                <input type='file' name="profilepicture" id="userPic" />
+               <!-- <input type='file' name="profilepicture" id="userPic" /> -->
 
 
                 <input type = "button" id = "register" value="Get Started" class="button

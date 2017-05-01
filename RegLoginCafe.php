@@ -76,6 +76,8 @@ $db->close();*/
     <link rel="stylesheet" href="css/style.css">
 
 
+
+
     <script type="text/javascript">
 
         function isValid() {
@@ -83,8 +85,10 @@ $db->close();*/
                 return true;
             return false;
         }
-        function check1(id) {
-            if (id === 0) {
+        function check1(id)
+        {
+            if (id === 0)
+            {
                 var adminid = document.getElementById("adminid").value;
                 var name = document.getElementById("name").value;
                 var address = document.getElementById("address").value;
@@ -92,19 +96,36 @@ $db->close();*/
                 var email = document.getElementById("email").value;
                 var pass1 = document.getElementById("password11").value;
                 var pass2 = document.getElementById("password22").value;
+                var imagename = document.getElementById("imageid").value;
+                var imageid = "imageid";
+
 
 
 
                 var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
+                var success = false;
+
+
+
+                xhttp.onreadystatechange = function ()
+                {
 
                     console.log(this.readyState + " " + this.status + " " + xhttp.responseText);
-                    if (this.readyState == 4 && this.status == 200) {
+                    if (this.readyState == 4 && this.status == 200)
+                    {
 
                         var response = xhttp.responseText;
                         document.getElementById("StatusLabel").style.display = "none";
                         document.getElementById("regStatus").value = response;
-                        if (String(response.trim()) === "Success") {
+                        console.log(response);
+                        if (String(response.trim()) === "Success")
+                        {
+                            success = true;
+                            console.log(success);
+                            var formdata = $('#registrationForm').serializeArray();
+                            alert(formdata);
+                            document.getElementById("registrationForm").submit();
+                           // window.location.href = 'welcome.php';
 
                         }
 
@@ -112,17 +133,21 @@ $db->close();*/
                 }
 
 
-                xhttp.open("GET", "regCafeDB" +
+
+                xhttp.open("POST", "regCafeDB" +
                     ".php?adminid=" + adminid + "&adminname=" + name + "&address" + address+ "&phone" + phone +
                     "&email" +
                     email +
                 "&password1=" + pass1 + "&password2=" + pass2, true);
 
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
                 xhttp.send();
 
 
             }
-            else if (id === 1) {
+            else if (id === 1)
+            {
                 var name = document.getElementById("ladminid").value;
                 var pass = document.getElementById("lpassword").value;
 
@@ -183,7 +208,7 @@ $db->close();*/
         <div id="signup">
             <h1>Sign Up for Free</h1>
 
-            <form id = "registrationForm" action="profile.php" method="GET" enctype='multipart/form-data'>
+            <form id = "registrationForm" action="upload.php" method="POST" enctype='multipart/form-data'>
 
 
 
@@ -245,10 +270,12 @@ $db->close();*/
                     <label hidden>
                         Upload Photo
                     </label>
-                    <!--<input id = "photo" type= "file" accept="image/*" required autocomplete="off"/>
-                    <input type='file' name="userFile" id="userFile" />
-                    <img id="photo" src="#" height="50%" width="100%" alt="your image"
-                    />-->
+                    <input type= "file" name = "imagename" id="imageid" accept="image/*" onchange="readURL(this)"
+                           required
+                           autocomplete="off"/>
+                    <!--<input type='file' name="userFile" id="userFile" />-->
+                    <img id="photo" src="photo_default.png" height="50%" width="100%" alt="your image"
+                    />
 
                 </div>
 

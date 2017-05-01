@@ -1,25 +1,6 @@
 
+<?php require ('Database.php'); ?>
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "102938";
-$dbname = "users";
-
-//create connection
-$db = new mysqli($servername, $username, $password, $dbname);
-
-//check connection
-if ($db -> connect_error){
-	die("connection failed ".$db->connect_error);
-}
-
-//success message
-//echo "connected successfully"."<br>";
-
-/*$alter = "ALTER TABLE MYTABLE
-		  MODIFY COLUMN password VARCHAR(100) NOT NULL";
-$db->query($alter);*/
 
 $val = "";
 
@@ -61,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 	}
 	else
 		$val = "Failed";
-	echo "$val"."$count2";
+	echo "$val";
 }
 ?>
 

@@ -1,32 +1,30 @@
+<?php require ('Database.php'); ?>
 
 <?php
+$val = "default1";
 
-$servername = "localhost";
-$username = "root";
-$password = "102938";
-$dbname = "users";
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+   /* function upload()
+    {
+        $value = '';
+        $imageid = $_POST['imageid'];
+        $imagename = $_POST['imagename'];
 
-//create connection
-$db = new mysqli($servername, $username, $password, $dbname);
+        $uploaddir = '/var/www/images/';
+        $uploadfile = $uploaddir . basename($_FILES[$imageid][$imagename]);
 
-//check connection
-if ($db -> connect_error){
-    die("connection failed ".$db->connect_error);
-}
+        if (move_uploaded_file($_FILES[$imagename]['tmp_name'], $uploadfile)) {
+            $value = "Success";
 
-//success message
-//echo "connected successfully"."<br>";
+        } else {
+            $value = "Failed";
+        }
+        return $value;
+    } */
 
-/*$alter = "ALTER TABLE MYTABLE
-		  MODIFY COLUMN password VARCHAR(100) NOT NULL";
-$db->query($alter);*/
+    $val = 'default2';
 
-$val = "";
-
-//if($_SERVER['REQUEST_METHOD'] === 'GET')
-{
-
-    $adminid = $_GET["adminid"];
+    $adminid = $_GET['adminid'];
     $adminname = $_GET['adminname'];
     $address = $_GET['address'];
     $phone = $_GET['phone'];
@@ -34,33 +32,36 @@ $val = "";
     $password1 = $_GET['password1'];
     $password2 = $_GET['password2'];
 
+    //echo "// "."$adminid";
 
     $retrieve_query = "SELECT * FROM admin where adminid = '$adminid' AND password='$password1'";
     $count = $db->query($retrieve_query);
     $count = $count->num_rows;
 
-    if($count ==0 && $password1 == $password2)
-    {
+
+    if ($count == 0 && $password1 === $password2) {
         $password1 = md5($password1);
-        $ins_data = "INSERT INTO admin (adminid, adminname, address, phone, email, password)
-		VALUES ('$adminid', '$name', '$address', '$phone', '$email', '$password1')";
+        //echo "$password1"." pass"."<br>";
+        //$len = strlen($password1);
+        //echo "$len"."<br>";
+        //echo "$adminid<br>"."$adminname<br>"."$address<br>"."$phone<br>"."$email<br>"."$password1<br>";
+
+        $ins_data = "INSERT INTO admin (adminid, adminname, address, phone,  password, email)
+		VALUES ('$adminid', '$adminname', '$address', '$phone', '$password1', '$email')";
+
         $res = $db->query($ins_data);
 
-        if($res == true)
-        {
 
+        if ($res == true) {
             $val = "Success";
-            $create_cafe="CREATE TABLE $username1 (
-					id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-					username VARCHAR(11) NOT NULL,
-					email VARCHAR(100) NOT NULL,
-					password VARCHAR(11) NOT NULL";
+            // $val = upload();
         }
-    }
-    else
+    } else
         $val = "Failed";
     echo "$val";
 }
+
+
 ?>
 
 

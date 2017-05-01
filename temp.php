@@ -1,34 +1,34 @@
-<html>
-<body>
-<form method='post' enctype='multipart/form-data' action="">
-    <fieldset>
-        <input type="file" id="theFile" name="theFile">
-        <input type="submit" value="submit" id = "submit" name="submit">
-    </fieldset>
-
-</form>
-
 <?php
-echo "init";
-if (isset($_POST["submit"]))
-{
-	$uploaddir = '/var/www/images/';
-	$uploadfile = $uploaddir . basename($_FILES['theFile']['name']);
+require ('Database.php');
 
-	echo "<p>";
+$retrieve_query = "SELECT location FROM canteen where adminid='testid2' " ;
+$temp = $db->query($retrieve_query);
 
-	if (move_uploaded_file($_FILES['theFile']['tmp_name'], $uploadfile)) {
-	  echo "File is valid, and was successfully uploaded.\n";
-	} else {
-	   echo "Upload failed";
-	}
+$row= $temp->fetch_assoc();
+$result = $row["location"];
+$result = str_replace("/var/www/html/FoodPage/","","$result");
 
-	echo "</p>";
-	echo '<pre>';
-	echo 'Here is some more debugging info:';
-	print_r($_FILES);
-	print "</pre>";
+/*$result = "<table>";
+
+while($row = $temp->fetch_assoc()){
+    $result = $result . "<tr><td>" . $row["location"] . "</td></tr>";
+
 }
+$result = $result . "</table>";*/
+
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>header</head>
+<body>
+
+    <p>why <?php echo "$result" ?></p>
+    <img src="<?php echo "$result" ?>" alt="testing"/>
+
+
+
 </body>
 </html>
+
+
