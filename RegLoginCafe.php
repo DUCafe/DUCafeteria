@@ -77,7 +77,6 @@ $db->close();*/
 
 
 
-
     <script type="text/javascript">
 
         function isValid() {
@@ -98,8 +97,6 @@ $db->close();*/
                 var pass2 = document.getElementById("password22").value;
                 var imagename = document.getElementById("imageid").value;
                 var imageid = "imageid";
-
-
 
 
                 var xhttp = new XMLHttpRequest();
@@ -135,8 +132,8 @@ $db->close();*/
 
 
                 xhttp.open("POST", "regCafeDB" +
-                    ".php?adminid=" + adminid + "&adminname=" + name + "&address" + address+ "&phone" + phone +
-                    "&email" +
+                    ".php?adminid=" + adminid + "&adminname=" + name + "&address=" + address+ "&phone=" + phone +
+                    "&email=" +
                     email +
                 "&password1=" + pass1 + "&password2=" + pass2, true);
 

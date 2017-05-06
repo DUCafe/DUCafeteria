@@ -1,3 +1,9 @@
+<?php
+    echo "welcome";
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +32,7 @@
     </style>
     <body>
         <div class="my-block">
-            <p>Alhamdulillah...</p>
+            <p>Search Completed</p>
         </div>
     </body>
 </head>

@@ -107,7 +107,7 @@ $db->close();*/
                         document.getElementById("regStatus").value = response;
                         if(String(response.trim()) === "Success")
                         {
-                            window.location = "google.com";
+                            window.location.href = "firstpage.php";
                         }
                     }
 
@@ -136,7 +136,7 @@ $db->close();*/
                         document.getElementById("loginStatus").value = response1;
                         if(String(response1.trim()) === "Success") {
 
-                            window.location.href = "welcome.php";
+                            window.location.href = "firstpage.php";
                             //document.getElementById("formlogin").submit();
                         }
                     }

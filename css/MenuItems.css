@@ -1,0 +1,40 @@
+.textbox {
+    padding: 1%;
+    margin-bottom:1%;
+     background: white;
+     border: 1px solid #96bcff;
+     border-radius: 1px;
+    color: #051508;
+     outline: none;
+     height:23px;
+     width: 50em;
+     font-size: 1em;
+     font-weight: 600;
+    text-align: left;
+    text-transform: capitalize;
+ }
+.field-css{
+    border: 1px solid #96bcff;
+    padding: 3%;
+    margin-inside: 1%;
+    background: #eeffae;
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+
+
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+/*tr:nth-child(even) {
+    background-color: #dddddd;
+}*/

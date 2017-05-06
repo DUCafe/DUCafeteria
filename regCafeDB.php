@@ -4,23 +4,6 @@
 $val = "default1";
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-   /* function upload()
-    {
-        $value = '';
-        $imageid = $_POST['imageid'];
-        $imagename = $_POST['imagename'];
-
-        $uploaddir = '/var/www/images/';
-        $uploadfile = $uploaddir . basename($_FILES[$imageid][$imagename]);
-
-        if (move_uploaded_file($_FILES[$imagename]['tmp_name'], $uploadfile)) {
-            $value = "Success";
-
-        } else {
-            $value = "Failed";
-        }
-        return $value;
-    } */
 
     $val = 'default2';
 

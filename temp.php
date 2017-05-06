@@ -1,32 +1,45 @@
 <?php
 require ('Database.php');
 
-$retrieve_query = "SELECT location FROM canteen where adminid='testid2' " ;
-$temp = $db->query($retrieve_query);
+$retrieve_query = "SELECT * FROM canteen" ;
+$result = $db->query($retrieve_query);
 
-$row= $temp->fetch_assoc();
-$result = $row["location"];
-$result = str_replace("/var/www/html/FoodPage/","","$result");
+$locations = array();
+$i = 0;
 
-/*$result = "<table>";
-
-while($row = $temp->fetch_assoc()){
-    $result = $result . "<tr><td>" . $row["location"] . "</td></tr>";
-
+while( $r = $result->fetch_assoc() ) {
+    $locations[$i] = $r['location'];
+    $i++;
 }
-$result = $result . "</table>";*/
+
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>header</head>
+<script type="text/javascript">
+
+    $( function()
+    {
+        locations =  <?php
+        echo json_encode($locations);
+        ?>  ;
+
+        $( "#tags" ).autocomplete({
+            source: locations
+        });
+    });
+
+
+
+</script>
+
+
 <body>
 
     <p>why <?php echo "$result" ?></p>
     <img src="<?php echo "$result" ?>" alt="testing"/>
-
-
 
 </body>
 </html>
