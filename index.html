@@ -1,464 +1,310 @@
-<!doctype html>
-<html>
+<?php
+    session_start();
+    $name;
+    if(!isset($_SESSION['login_user']))
+    {
+        $name = 'false';
+    }
+    else
+        $name = $_SESSION['login_user'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClockPicker</title>
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="dist/bootstrap-clockpicker.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/github.min.css">
-<style type="text/css">
-.navbar h3 {
-	color: #f5f5f5;
-	margin-top: 14px;
-}
-.hljs-pre {
-	background: #f8f8f8;
-	padding: 3px;
-}
-.footer {
-	border-top: 1px solid #eee;
-	margin-top: 40px;
-	padding: 40px 0;
-}
-.input-group {
-	width: 110px;
-	margin-bottom: 10px;
-}
-.pull-center {
-	margin-left: auto;
-	margin-right: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-@media (max-width: 767px) {
-  .pull-center {
-    float: right;
-  }
-}
-</style>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="assets/js/html5shiv.js"></script>
-  <script src="assets/js/respond.min.js"></script>
-<![endif]-->
+	<meta charset="utf-8">
+	<title>DU Canteens</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+
+
+        function goto(location)
+        {
+            window.location.href = "findMenu.php?location="+location;
+        }
+
+        function mysearch()
+        {
+            var name = document.getElementById("search").value;
+            alert(name);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function ()
+            {
+
+                if (this.readyState == 4 && this.status == 200)
+                {
+
+                    var response1 = xhttp.responseText;
+                    document.getElementById("search").value = response1;
+                    if(String(response1.trim()) === "Success") {
+
+                        window.location.href = "welcome.php";
+
+
+                    }
+                }
+            }
+            xhttp.open("GET", "search.php?canteenname1="+name, true);
+            xhttp.send();
+        }
+
+
+
+	</script>
+
+
+	</meta>
+
+	<!--
+
+    http://www.tooplate.com/view/2076-zentro
+
+    -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/style_firstpage.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+<!-- preloader section -->
+<section class="preloader">
+	<div class="sk-spinner sk-spinner-pulse"></div>
+</section>
+
+<!-- navigation section -->
+<section class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
-		<ul class="nav navbar-nav pull-right">
-			<li><a href="https://github.com/weareoutman/clockpicker">Fork me on GitHub</a></li>
-		</ul>
-		<h3>ClockPicker</h3>
-	</div>
-</div>
-
-<div class="container">
-	<p class="lead">
-		A clock-style timepicker for Bootstrap (or jQuery).
-		<a href="https://travis-ci.org/weareoutman/clockpicker"><img src="https://travis-ci.org/weareoutman/clockpicker.svg" alt="Build Status" data-canonical-src="https://travis-ci.org/weareoutman/clockpicker.svg" style="max-width:100%;"></a>
-	</p>
-
-	<p>
-		<a href="https://github.com/weareoutman/clockpicker/archive/gh-pages.zip" class="btn btn-lg btn-default" target="_blank">
-			<span class="glyphicon glyphicon-cloud-download"></span> Download ZIP
-		</a>
-		&nbsp; CSS &lt; 6KB, JS &lt; 9KB, after minified.
-	</p>
-
-	<h3>Browser support</h3>
-	<p>
-		All major browsers are supported, including IE 9+. It should look and behave well enough in IE 8.
-	</p>
-
-	<h3>Device support</h3>
-	<p>
-		Both desktop and mobile device are supported. It also works great in touch screen device.
-	</p>
-
-	<h3>Dependencies</h3>
-	<p>
-		ClockPicker was designed for Bootstrap in the beginning. So Bootstrap (and jQuery) is the only dependency(s).
-	</p>
-	<p>
-		Since it only used <code>.popover</code> and some of <code>.btn</code> styles of Bootstrap, I picked these styles to build a jQuery plugin.
-		Feel free to use <code>jquery-*</code> files instead of <code>bootstrap-*</code> , for non-bootstrap project.
-	</p>
-	<p>
-		<a href="jquery.html">See ClockPicker for jQuery</a>.
-	</p>
-
-	<h3>Examples</h3>
-	<a href="http://jsfiddle.net/weareoutman/YkvK9/">Try it on jsfiddle</a>
-	<div class="form-group">
-		<h4>Default: </h4>
-		<div class="input-group clockpicker">
-			<input type="text" class="form-control" value="09:30">
-			<span class="input-group-addon">
-				<span class="glyphicon glyphicon-time"></span>
-			</span>
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">ENJOY GOOD FOOD AT DU CAMPUS</a>
 		</div>
-		<pre class="hljs-pre"><code class="html">&lt;div class="input-group clockpicker"&gt;
-	&lt;input type="text" class="form-control" value="09:30"&gt;
-	&lt;span class="input-group-addon"&gt;
-		&lt;span class="glyphicon glyphicon-time"&gt;&lt;/span&gt;
-	&lt;/span&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
-$('.clockpicker').clockpicker();
-&lt;/script&gt;</code></pre>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">HOME</a></li>
+				<li><a href="#gallery" class="smoothScroll">RESTAURANTS</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SignUp <span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="about-us">
+						<li><a href="RegLoginUser.php">Student</a></li>
+						<li><a href="RegLoginCafe.php">Canteen Controller</a></li>
+
+					</ul>
+				</li>
+				<!-- <li><a href="#menu" class="smoothScroll">SPECIAL MENU</a></li> -->
+				<li><a href="RegLoginUser.php" class="smoothScroll">Log In</a></li>
+				<li><a href="logout.php" class="smoothSroll">Log Out</a></li>
+				<li><a href="#contact" class="smoothScroll">Contact</a></li>
+
+			</ul>
+
+		</div>
+		<!--<div class="box">
+            <div class="container-4">
+                <input type="search" id="search" placeholder="Search..." />
+                <button class="icon"><i class="fa fa-search"></i></button>
+            </div> -->
 	</div>
-	<div class="form-group">
-		<h4>Place at left, align the arrow to top, auto close:</h4>
-		<div class="clearfix">
-			<div class="input-group clockpicker pull-center" data-placement="left" data-align="top" data-autoclose="true">
-				<input type="text" class="form-control" value="13:14">
-				<span class="input-group-addon">
-					<span class="glyphicon glyphicon-time"></span>
-				</span>
+	</div>
+</section>
+
+
+<!-- home section -->
+<section id="home" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h1>DU CAFETERIAS</h1>
+
+				<!--<h2>CLEAN &amp; SIMPLE DESIGN</h2> -->
+				<!--<a href="#gallery" class="smoothScroll btn btn-default">LEARN MORE</a>-->
+				<section class="webdesigntuts-workshop">
+					<form>
+						<!--<input type="search" placeholder="What Canteen are you looking for?"> -->
+						<!--<label for="tags"></label>
+                        <input type="text" id="tags" list="json-datalist" placeholder="What Canteen are you looking for?">
+                        <input type="button" id="button" value = "Search" onclick="search()"/> -->
+						<input type="text" id="search" list="json-datalist" placeholder="...">
+						<input type="button" id="button" value = "Search" onclick="mysearch()"/>
+						<datalist id="json-datalist"></datalist>
+
+
+						<!--<datalist id="languages">
+                            <option value="Pusti Canteen">
+                            <option value="Jahir Canteen">
+                            <option value="Hakeem Chattar">
+                            <option value="TSC Cafeteria">
+                            <option value="Math Canteen">
+                            <option value="Deen Office Canteen">
+                        </datalist> -->
+						<!-- <button id="button" onclick="ajaxFunction()">Search</button>
+                         <!--<input type='button' onclick='ajaxFunction()' value='Search'/>-->
+					</form>
+				</section>
 			</div>
 		</div>
-		<pre class="hljs-pre"><code class="html">&lt;div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true"&gt;
-	&lt;input type="text" class="form-control" value="13:14"&gt;
-	&lt;span class="input-group-addon"&gt;
-		&lt;span class="glyphicon glyphicon-time"&gt;&lt;/span&gt;
-	&lt;/span&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
-$('.clockpicker').clockpicker();
-&lt;/script&gt;</code></pre>
 	</div>
-	<div class="form-group">
-		<h4>Set options in javascript, instead of <code>data-*</code> :</h4>
-		<div class="input-group clockpicker" data-placement="top" data-align="left" data-donetext="Done">
-			<input type="text" class="form-control" value="18:00">
-			<span class="input-group-addon">
-				<span class="glyphicon glyphicon-time"></span>
-			</span>
-		</div>
-		<pre class="hljs-pre"><code class="html">&lt;div class="input-group clockpicker"&gt;
-	&lt;input type="text" class="form-control" value="18:00"&gt;
-	&lt;span class="input-group-addon"&gt;
-		&lt;span class="glyphicon glyphicon-time"&gt;&lt;/span&gt;
-	&lt;/span&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
-$('.clockpicker').clockpicker({
-	placement: 'top',
-	align: 'left',
-	donetext: 'Done'
-});
-&lt;/script&gt;</code></pre>
-	</div>
-	<div class="form-group">
-		<h4>Set default value, input without addon, and manual operations:</h4>
-		<div class="clearfix">
-			<div class="pull-center clearfix" style="margin-bottom:10px;">
-				<button type="button" class="btn btn-default pull-right" id="check-minutes">Check the minutes</button>
-				<input class="form-control pull-right" id="single-input" value="" placeholder="Now" style="width:80px;margin-right:20px;">
+</section>
+
+
+
+
+<!-- gallery section -->
+<section id="gallery" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+				<h1 class="heading">Food Gallery</h1>
+				<hr>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+				<a href="findMenu.php?location='images/modhu.jpg'" data-lightbox-gallery="zenda-gallery"><img
+						src="images/modhu.jpg" alt="gallery img" onclick="goto('images/modhu.jpg')"></a>
+				<div>
+					<h3>Modhur Canteen</h3>
+					<span>Seafood / Shrimp / Lemon</span>
+				</div>
+				<a href="findMenu.php?location='images/gallery-img2.jpg'" data-lightbox-gallery="zenda-gallery"><img
+						src="images/tsc.jpg" alt="gallery img" onclick="goto('images/gallery-img2.jpg')"></a>
+				<div>
+					<h3>TSC Cafeteria</h3>
+					<span>Tomato / Rosemary / Lemon</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<a href="findMenu.php?location='images/gallery-img3.jpg'" data-lightbox-gallery="zenda-gallery"><img
+						src="images/gallery-img3.jpg" alt="gallery img"  onclick="goto('images/gallery-img3.jpg')"></a>
+				<div>
+					<h3>Lemon-Rosemary Bakery</h3>
+					<span>Bread / Rosemary / Orange</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+				<a href="findMenu.php?location='images/gallery-img4.jpg'" data-lightbox-gallery="zenda-gallery"><img
+						src="images/gallery-img4.jpg" alt="gallery img" onclick="goto('images/gallery-img4.jpg')"></a>
+				<div>
+					<h3>Lemon-Rosemary Salad</h3>
+					<span>Chicken / Rosemary / Green</span>
+				</div>
+				<a href="findMenu.php?location='images/gallery-img5.jpg'" data-lightbox-gallery="zenda-gallery"><img
+						src="images/gallery-img5.jpg" alt="gallery img" onclick="goto('images/gallery-img5.jpg')"></a>
+				<div>
+					<h3>Lemon-Rosemary Pizza</h3>
+					<span>Pasta / Rosemary / Green</span>
+				</div>
 			</div>
 		</div>
-		<pre class="hljs-pre"><code class="html">&lt;input class="form-control" id="single-input" value="" placeholder="Now"&gt;
-&lt;button type="button" id="check-minutes"&gt;Check the minutes&lt;/button&gt;
-
-&lt;script type="text/javascript"&gt;
-var input = $('#single-input').clockpicker({
-	placement: 'bottom',
-	align: 'left',
-	autoclose: true,
-	'default': 'now'
-});
-
-// Manually toggle to the minutes view
-$('#check-minutes').click(function(e){
-	// Have to stop propagation here
-	e.stopPropagation();
-	input.clockpicker('show')
-			.clockpicker('toggleView', 'minutes');
-});
-&lt;/script&gt;</code></pre>
 	</div>
-	<div class="form-group">
-		<h4>Callbacks:</h4>
-		<div class="clearfix">
-			<div class="input-group clockpicker-with-callbacks">
-				<input type="text" class="form-control" value="10:10">
-				<span class="input-group-addon">
-					<span class="glyphicon glyphicon-time"></span>
-				</span>
+</section>
+
+<!-- contact section -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
+				<h1 class="heading">Contact Us</h1>
+				<hr>
+			</div>
+			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+				<form action="#" method="post">
+					<div class="col-md-6 col-sm-6">
+						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<textarea name="message" rows="8" class="form-control" id="message" placeholder="Message"></textarea>
+					</div>
+					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+						<input name="submit" type="submit" class="form-control" id="submit" value="make a reservation">
+					</div>
+				</form>
+			</div>
+			<div class="col-md-2 col-sm-1"></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- footer section -->
+<footer class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<h2 class="heading">Contact Info.</h2>
+				<div class="ph">
+					<p><i class="fa fa-phone"></i> Phone</p>
+					<h4>090-080-0760</h4>
+				</div>
+				<div class="address">
+					<p><i class="fa fa-map-marker"></i> Our Location</p>
+					<h4>120 Duis aute irure, California, USA</h4>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<h2 class="heading">Open Hours</h2>
+				<p>Sunday <span>10:30 AM - 10:00 PM</span></p>
+				<p>Mon-Fri <span>9:00 AM - 8:00 PM</span></p>
+				<p>Saturday <span>11:30 AM - 10:00 PM</span></p>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<h2 class="heading">Follow Us</h2>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.6s"></a></li>
+					<li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-github wow bounceIn" data-wow-delay="0.9s"></a></li>
+				</ul>
 			</div>
 		</div>
-		<pre class="hljs-pre">
-			<code class="html">
-				&lt;input class="form-control" id="single-input" value="" placeholder="Now"&gt;
-				&lt;script type="text/javascript"&gt;
-				var input = $('.clockpicker-with-callbacks').clockpicker({
-					donetext: 'Done',
-						init: function() { 
-							console.log("colorpicker initiated");
-						},
-						beforeShow: function() {
-							console.log("before show");
-						},
-						afterShow: function() {
-							console.log("after show");
-						},
-						beforeHide: function() {
-							console.log("before hide");
-						},
-						afterHide: function() {
-							console.log("after hide");
-						},
-						beforeHourSelect: function() {
-							console.log("before hour selected");
-						},
-						afterHourSelect: function() {
-							console.log("after hour selected");
-						},
-						beforeDone: function() {
-							console.log("before done");
-						},
-						afterDone: function() {
-							console.log("after done");
-						}
-				});
-
-				// Manually toggle to the minutes view
-				$('#check-minutes').click(function(e){
-					// Have to stop propagation here
-					e.stopPropagation();
-					input.clockpicker('show')
-							.clockpicker('toggleView', 'minutes');
-				});
-				&lt;/script&gt;
-			</code>
-		</pre>
 	</div>
+</footer>
 
-	<h3>Options</h3>
-	<table class="table table-bordered table-striped">
-	<thead><tr>
-	<th>Name</th>
-	<th>Default</th>
-	<th>Description</th>
-	</tr></thead>
-	<tbody>
-	<tr>
-	<td>default</td>
-	<td>''</td>
-	<td>default time, 'now' or '13:14' e.g.</td>
-	</tr>
-	<tr>
-	<td>placement</td>
-	<td>'bottom'</td>
-	<td>popover placement</td>
-	</tr>
-	<tr>
-	<td>align</td>
-	<td>'left'</td>
-	<td>popover arrow align</td>
-	</tr>
-	<tr>
-	<td>donetext</td>
-	<td>'完成'</td>
-	<td>done button text</td>
-	</tr>
-	<tr>
-	<td>autoclose</td>
-	<td>false</td>
-	<td>auto close when minute is selected</td>
-	</tr>
-	<tr>
-	<td>vibrate</td>
-	<td>true</td>
-	<td>vibrate the device when dragging clock hand</td>
-	</tr>
-	<tr>
-	<td>fromnow</td>
-	<td>0</td>
-	<td>set default time to * milliseconds from now (using with default = 'now')</td>
-	</tr>
-	<tr>
-		<td>init</td>
-		<td></td>
-		<td>callback function triggered after the colorpicker has been initiated</td>
-	</tr>
-	<tr>
-		<td>beforeShow</td>
-		<td></td>
-		<td>callback function triggered before popup is shown</td>
-	</tr>
-	<tr>
-		<td>afterShow</td>
-		<td></td>
-		<td>callback function triggered after popup is shown</td>
-	</tr>
-	<tr>
-		<td>beforeHide</td>
-		<td></td>
-		<td>callback function triggered before popup is hidden<br/>
-			<b>Note:</b>&nbsp;<i>will be triggered between a beforeDone and afterDone</i>
-		</td>
-	</tr>
-	<tr>
-		<td>afterHide</td>
-		<td></td>
-		<td>callback function triggered after popup is hidden<br/>
-			<b>Note:</b>&nbsp;<i>will be triggered between a beforeDone and afterDone</i>
-		</td>
-	</tr>
-	<tr>
-		<td>beforeHourSelect</td>
-		<td></td>
-		<td>callback function triggered before user makes an hour selection</td>
-	</tr>
-	<tr>
-		<td>afterHourSelect</td>
-		<td></td>
-		<td>callback function triggered after user makes an hour selection</td>
-	</tr>
-	<tr>
-		<td>beforeDone</td>
-		<td></td>
-		<td>callback function triggered before time is written to input</td>
-	</tr>
-	<tr>
-		<td>afterDone</td>
-		<td></td>
-		<td>callback function triggered after time is written to input</td>
-	</tr>
-	</tbody>
-	</table>
 
-	<h3>Operations</h3>
-	<table class="table table-bordered table-striped">
-	<thead><tr>
-	<th>operation</th>
-	<th>Arguments</th>
-	<th>Description</th>
-	</tr></thead>
-	<tbody>
-	<tr>
-	<td>show</td>
-	<td></td>
-	<td>show the clockpicker</td>
-	</tr>
-	<tr>
-	<td>hide</td>
-	<td></td>
-	<td>hide the clockpicker</td>
-	</tr>
-	<tr>
-	<td>remove</td>
-	<td></td>
-	<td>remove the clockpicker (and event listeners)</td>
-	</tr>
-	<tr>
-	<td>toggleView</td>
-	<td>'hours' or 'minutes'</td>
-	<td>toggle to hours or minutes view</td>
-	</tr>
-	</tbody>
-	</table>
+<!-- copyright section -->
+<section id="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h3>ZENTRO</h3>
+				<p>Copyright © Zentro Restaurant and Cafe
 
-	<h3>What's included</h3>
-	<pre class="hljs-pre"><code class="bash">clockpicker/
-├── dist/
-│   ├── bootstrap-clockpicker.css      # full code for bootstrap
-│   ├── bootstrap-clockpicker.js
-│   ├── bootstrap-clockpicker.min.css  # compiled and minified files for bootstrap
-│   ├── bootstrap-clockpicker.min.js
-│   ├── jquery-clockpicker.css         # full code for jquery
-│   ├── jquery-clockpicker.js
-│   ├── jquery-clockpicker.min.css     # compiled and minified files for jquery
-│   └── jquery-clockpicker.min.js
-└── src/                               # source code
-    ├── clockpicker.css
-    ├── clockpicker.js
-    └── standalone.css                 # some styles picked from bootstrap</code></pre>
-
-    <h3>License</h3>
-    <p>MIT</p>
-</div>
-
-<div class="container">
-	<div class="footer">
-		<p>
-			&copy; Wang Shenwei. 
-			<a href="https://github.com/weareoutman/clockpicker">Fork me on GitHub</a>
-		</p>
+					| Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>
+			</div>
+		</div>
 	</div>
-</div>
+</section>
 
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>
-<script type="text/javascript">
-$('.clockpicker').clockpicker()
-	.find('input').change(function(){
-		console.log(this.value);
-	});
-var input = $('#single-input').clockpicker({
-	placement: 'bottom',
-	align: 'left',
-	autoclose: true,
-	'default': 'now'
-});
+<!-- JAVASCRIPT JS FILES -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/datalist.js"></script>
 
-$('.clockpicker-with-callbacks').clockpicker({
-		donetext: 'Done',
-		init: function() { 
-			console.log("colorpicker initiated");
-		},
-		beforeShow: function() {
-			console.log("before show");
-		},
-		afterShow: function() {
-			console.log("after show");
-		},
-		beforeHide: function() {
-			console.log("before hide");
-		},
-		afterHide: function() {
-			console.log("after hide");
-		},
-		beforeHourSelect: function() {
-			console.log("before hour selected");
-		},
-		afterHourSelect: function() {
-			console.log("after hour selected");
-		},
-		beforeDone: function() {
-			console.log("before done");
-		},
-		afterDone: function() {
-			console.log("after done");
-		}
-	})
-	.find('input').change(function(){
-		console.log(this.value);
-	});
 
-// Manually toggle to the minutes view
-$('#check-minutes').click(function(e){
-	// Have to stop propagation here
-	e.stopPropagation();
-	input.clockpicker('show')
-			.clockpicker('toggleView', 'minutes');
-});
-if (/mobile/i.test(navigator.userAgent)) {
-	$('input').prop('readOnly', true);
-}
-</script>
-<script type="text/javascript" src="assets/js/highlight.min.js"></script>
-<script type="text/javascript">
-hljs.configure({tabReplace: '    '});
-hljs.initHighlightingOnLoad();
-</script>
+
 </body>
 </html>
+
