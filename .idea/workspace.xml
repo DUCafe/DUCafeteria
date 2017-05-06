@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aafdc4d-289d-4976-844b-b3589e960523" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Menu.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canteen.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/MenuStyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/MenuItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/B1_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/urgent.tar.gz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database.php" afterPath="$PROJECT_DIR$/Database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginCafe.php" afterPath="$PROJECT_DIR$/RegLoginCafe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginUser.php" afterPath="$PROJECT_DIR$/RegLoginUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firstpage.php" afterPath="$PROJECT_DIR$/firstpage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginCafeDB.php" afterPath="$PROJECT_DIR$/loginCafeDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regCafeDB.php" afterPath="$PROJECT_DIR$/regCafeDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp.php" afterPath="$PROJECT_DIR$/temp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcome.php" afterPath="$PROJECT_DIR$/welcome.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="findMenu.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="findMenu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/findMenu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
+            <state relative-caret-position="528">
               <caret line="131" column="81" lean-forward="false" selection-start-line="131" selection-start-column="81" selection-end-line="131" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -105,6 +93,16 @@
                 <marker date="1494049705218" expanded="true" signature="526:572" ph="SELECT * FRO... comment" />
                 <marker date="1494049705218" expanded="true" signature="1380:1579" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,12 +215,12 @@
         <option value="$PROJECT_DIR$/loginCafeDB.php" />
         <option value="$PROJECT_DIR$/RegLoginUser.php" />
         <option value="$PROJECT_DIR$/firstpage.php" />
-        <option value="$PROJECT_DIR$/Database.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
         <option value="$PROJECT_DIR$/addComment.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/MenuItems.css" />
         <option value="$PROJECT_DIR$/findMenu.php" />
+        <option value="$PROJECT_DIR$/Database.php" />
       </list>
     </option>
   </component>
@@ -504,12 +502,12 @@
       <workItem from="1493614450406" duration="68227000" />
       <workItem from="1493951270973" duration="1993000" />
       <workItem from="1493958105644" duration="42880000" />
-      <workItem from="1494030797757" duration="9853000" />
+      <workItem from="1494030797757" duration="10498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251542000" />
+    <option name="totallyTimeSpent" value="252187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1000,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/findMenu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
+        <state relative-caret-position="528">
           <caret line="131" column="81" lean-forward="false" selection-start-line="131" selection-start-column="81" selection-end-line="131" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1012,6 +1002,14 @@
             <marker date="1494049705218" expanded="true" signature="526:572" ph="SELECT * FRO... comment" />
             <marker date="1494049705218" expanded="true" signature="1380:1579" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
