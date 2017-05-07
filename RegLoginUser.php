@@ -70,6 +70,12 @@ $db->close();*/
     <meta http-equiv='pragma' content='no-cache'>
     <meta charset="utf-8"/>
     <title>Sign-Up/Login Form</title>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/MenuItems.css">
+
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -93,6 +99,14 @@ $db->close();*/
                 var pass1 = document.getElementById("password11").value;
                 var pass2 = document.getElementById("password22").value;
                 var register = document.getElementById("register").value;
+                var reg = document.getElementById("reg").rows.item(1);
+                var reg1 = reg.cells.item(0).innerHTML;
+                var reg2 = reg.cells.item(1).innerHTML;
+                var reg3 = reg.cells.item(2).innerHTML;
+                var reg = reg1+'-'+reg2+'-'+reg3;
+
+
+                alert(reg1 + reg2 + reg3);
 
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function ()
@@ -109,11 +123,16 @@ $db->close();*/
                         {
                             window.location.href = "firstpage.php";
                         }
+                        else if(String(response).trim() == "reg")
+                        {
+                            alert("You are not a student of DU");
+                            return false;
+                        }
                     }
 
                 }
                 xhttp.open("GET", "regUserDB" +
-                    ".php?username1="+name+"&email1="+email+"&password1="+pass1+"&password2="+pass2,
+                    ".php?username1="+name+"&email1="+email+"&password1="+pass1+"&password2="+pass2+"&reg="+reg,
                     true);
 
                 xhttp.send();
@@ -145,8 +164,8 @@ $db->close();*/
                 xhttp.send();
             }
         }
-    </script>
 
+    </script>
 
 </head>
 
@@ -178,6 +197,17 @@ $db->close();*/
                         Email Address<span class="req">*</span>
                     </label>
                     <input id = email1 type="email"required autocomplete="off"/>
+                </div>
+
+                <div class="field-wrap">
+                    <table id="reg" name="reg" class="tableclass">
+                        <th colspan="3">Registration No.</th>
+                        <tr contenteditable="true">
+                            <td onkeyup="return (this.innerText.length <= 4)" contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="field-wrap">

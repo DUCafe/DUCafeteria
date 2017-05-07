@@ -45,7 +45,8 @@
 
 
 }
-table {
+
+table{
     margin-left: 10%;
     margin-right: 10%;
     margin-inside: 10%;
@@ -55,9 +56,37 @@ table {
     color: #2c3749;
     background-color: #eeffae;
 }
-
-td, th {
+tr, td{
     border: 1px solid #2c3749;
     text-align: left;
     padding: 15px;
 }
+
+.tableclass table{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-inside: 10%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    color: #2c3749;
+    background-color: #2D5E41;
+    text-overflow: ellipsis;
+}
+
+.tableclass td, th {
+    max-width: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #2c3749;
+    text-align: left;
+    padding: 15px;
+    table-layout: fixed;
+    word-break: break-all;
+    max-width: 5px;
+    word-wrap:break-word;
+
+}
+
+

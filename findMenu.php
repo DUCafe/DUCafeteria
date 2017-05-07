@@ -3,7 +3,7 @@ session_start();
 $name;
 if(!isset($_SESSION['login_user']))
 {
-    $name = 'false';
+    $name = 'nothing';
 }
 else
     $name = $_SESSION['login_user'];
@@ -66,6 +66,8 @@ $j = 0;
 while( $r = $result->fetch_assoc()) {
     $food_desc[$i][0] = $r['menuname'];
     $food_desc[$i][1] = $r['price'];
+    $food_desc[$i][2] = $r['availableFrom'];
+    $food_desc[$i][3] = $r['availableTo'];
     $i++;
     //echo $r['menuname'];
    //echo $r['price'];
@@ -93,6 +95,9 @@ include ('navbar.php');
     <link rel="stylesheet" href="css/MenuItems.css">
     <meta charset="utf-8">
     <script type="text/javascript">
+        var comment_num;
+        name = '<?php echo ($name)?>';
+        cid = '<?php echo ($cid) ?>';
         function setComment()
         {
             var review;
@@ -108,7 +113,9 @@ include ('navbar.php');
 
                     if (xhttp.readyState == XMLHttpRequest.DONE)
                     {
+                        //var name = '<?php echo ($name)?>';
                         var response = xhttp.responseText;
+                        comment_num++;
                         if(String(response).trim() == 'success')
                         {
                             //document.getelementbyid('comments').readOnly = false;
@@ -121,6 +128,7 @@ include ('navbar.php');
                             //label.setAttribute('class','textbox');
 
 
+                            //alert(name);
 
                             oldcomment.setAttribute('type', 'text');
                             oldcomment.setAttribute('class', 'textbox');
@@ -134,10 +142,11 @@ include ('navbar.php');
                             //var breakline = document.createElement("br");
                             //document.getElementById('comments').appendChild(breakline);
 
-                            document.getElementById('comments').readOnly = true;
+                            document.getElementById('comments').readOnly = false;
                         }
                     }
                 }
+                //alert(cid + " "+review);
             xhttp.open('GET', 'addComment.php?cid=' + cid + '&review=' + review + '&menuname=' + 'dummy',
                 true);
             xhttp.send();
@@ -150,14 +159,21 @@ include ('navbar.php');
 
         function getData() {
 
+            var food_data = <?php echo json_encode($food_desc)?>;
+            var comment_data = <?php echo json_encode($comment)?>;
+
+            var len = food_data.length;
+            comment_num = comment_data.length;
+
+            //alert(comment_num);
+
+
             var location = '<?php echo ($location) ?>';
             //alert(location);
             location = String(location).trim();
             document.getElementById('canteenpic').src = location;
 
-
-            name = '<?php echo ($name)?>';
-            if(name == 'false')
+            if(name == 'nothing')
             {
                 document.getElementById('comments').style.display='none';
                 document.getElementById('mycomment').style.display='none';
@@ -169,36 +185,26 @@ include ('navbar.php');
                 document.getElementById("LogInRedirection").style.display='none';
             }
 
-            cid = '<?php echo ($cid) ?>';
-
-            var food_data = <?php echo json_encode($food_desc)?>;
-            var comment_data = <?php echo json_encode($comment)?>;
-
-            var len = food_data.length;
-            var comment_num = comment_data.length;
 
            // alert(len);
             //alert(comment_num);
 
-            if(len == 0)
+            if(len == 1)
             {
                 document.getElementById('foodtable').style.display='none';
-            }
-            if(comment_num == 0)
-            {
-                document.getElementById('comments').style.display='none';
+                document.getElementById('lid').innerHTML = "Item Description : N/A";
             }
 
             for(var i=0; i<len; i++)
             {
                 var table = document.getElementById("foodtable");
                 var row = table.insertRow();
+                var cell = new Array();
 
-                var cell1 = row.insertCell();
-                var cell2 = row.insertCell();
-
-                cell1.innerHTML = food_data[i][0];
-                cell2.innerHTML = food_data[i][1];
+                for(var j=0; j<4; j++){
+                    cell[i] = row.insertCell();
+                    cell[i].innerHTML = food_data[i][j];
+                }
             }
 
             for(var i=0; i<comment_num; i++)
@@ -207,7 +213,7 @@ include ('navbar.php');
                 var oldcomment = document.createElement("input");
 
                 var label = document.createElement('LEGEND');
-                label.innerHTML = "<br>"+comment_data[i][0].toUpperCase()+" :   ";
+                label.innerHTML = "<br>"+comment_data[i][0]+" :   ";
                 label.setAttribute('style', "display:block");
                 //label.setAttribute('class','textbox');
 
@@ -240,13 +246,15 @@ include ('navbar.php');
 
     <center><img id="canteenpic" alt="Canteen Photo" height="5%" width="40%" align="absmiddle"></center>
     <div class="field-css">
-        <fieldset><legend>Item Description</legend>
+        <fieldset><strong><legend id="lid">Item Description</legend></strong>
 
 
             <table id="foodtable">
                 <tr>
                     <th>Item Name</th>
                     <th>Price</th>
+                    <th>Available From</th>
+                    <th>Available To</th>
                 </tr>
             </table>
         </div>

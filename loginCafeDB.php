@@ -8,10 +8,16 @@ $value = "default";
 
 $username1 = $_GET['username1'];
 $password1 = md5($_GET['password1']);
+$id = $_GET['id'];
 
+global $retrieve_query;
 
-$retrieve_query = "SELECT * FROM admin where adminid = '$username1' AND password = '$password1'";
-$count_query = "SELECT COUNT(*) FROM admin WHERE adminid = '$username1'";
+if($id == 1) {
+    $retrieve_query = "SELECT * FROM admin where adminid = '$username1' AND password = '$password1'";
+}
+else{
+    $retrieve_query = "SELECT * FROM admin where adminid = '$username1'";
+}
 
 
 $result = $db->query($retrieve_query);

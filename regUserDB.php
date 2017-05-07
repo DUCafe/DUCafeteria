@@ -11,8 +11,14 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 	$email1 = $_GET['email1'];
 	$password1 = $_GET['password1'];
 	$password2 = $_GET['password2'];
+	$reg = $_GET['reg'];
 
 	//$password1 = md5($password1);
+
+	$retrieve_query = "SELECT * FROM regtable WHERE regnumber='$reg'";
+	$count11 = $db->query($retrieve_query);
+	$count22 = $count11->num_rows;
+
 
     $retrieve_query = "SELECT * FROM MYTABLE WHERE email='$email1' AND password=md5('$password1')";
     $count1 = $db->query($retrieve_query);
@@ -20,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 
 
 	
-	if($count2 == 0 && $password1 == $password2)
+	if($count2 == 0 && $count22 == 1 && $password1 == $password2)
 	{
 		$password1 = md5($password1);
 		$ins_data = "INSERT INTO MYTABLE (username, email, password)
@@ -40,8 +46,10 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 
 		}
 	}
-	else
-		$val = "Failed";
+	else if($count22 == 0)
+	{
+        $val = "reg";
+	}
 	echo "$val";
 }
 ?>

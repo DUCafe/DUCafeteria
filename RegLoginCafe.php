@@ -17,11 +17,6 @@
 
     <script type="text/javascript">
 
-        function isValid() {
-            if (response == "Success")
-                return true;
-            return false;
-        }
         function check1(id)
         {
             if (id === 0)
@@ -124,7 +119,7 @@
 
                     }
                 }
-                xhttp1.open("GET", "loginCafeDB.php?username1=" + name + "&password1=" + pass, true);
+                xhttp1.open("GET", "loginCafeDB.php?username1=" + name + "&password1=" + pass + "&id=1", true);
                 xhttp1.send();
             }
         }

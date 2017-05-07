@@ -15,7 +15,6 @@ while( $r = $result->fetch_assoc() ) {
 }
 
 echo json_encode($usernames);
-
 ?>
 
 
