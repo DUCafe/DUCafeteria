@@ -1,35 +1,22 @@
 <?php
+require ('Database.php');
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "102938";
-$dbname = "users";
 
-$db = mysqli_connect($servername, $username, $password, $dbname);
-
-if ($db -> connect_error){
-    die("connection failed ".$db->connect_error);
-}
-
-//success message
-//echo "connected."."<br>";
-
-
-
-$value = "";
-//if(isset($_GET['login_button']))
-
+$value = "default";
+//echo "$value";
 
 
 $username1 = $_GET['username1'];
 $password1 = md5($_GET['password1']);
 
-$retrieve_query = "SELECT * FROM admin where username = '$username1' AND password = '$password1'";
-$count_query = "SELECT COUNT(*) FROM admin WHERE username = '$username1'";
+
+$retrieve_query = "SELECT * FROM admin where adminid = '$username1' AND password = '$password1'";
+$count_query = "SELECT COUNT(*) FROM admin WHERE adminid = '$username1'";
 
 
 $result = $db->query($retrieve_query);
 $counter = $result->num_rows;
+//echo $counter;
 //$row = $result->num_rows;
 
 if($counter > 0)

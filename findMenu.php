@@ -8,22 +8,52 @@ if(!isset($_SESSION['login_user']))
 else
     $name = $_SESSION['login_user'];
 
-global $db1;
 include ('Database.php');
 
 
-$db1 = $db;
 
-$location = $_GET['location'];
+global $retrieve_query;
+global $location;
+global $canteenname;
 
-$retrieve_query = "SELECT canteenid FROM canteen where location = '$location'" ;
+
+$id = $_GET['id'];
+if($id == 1)
+{
+    $location = $_GET['location'];
+    $retrieve_query = "SELECT canteenid FROM canteen where location = '$location'" ;
+}
+else
+{
+    $canteenname = $_GET['canteenname'];
+    $retrieve_query = "SELECT canteenid FROM canteen where canteenname = '$canteenname'" ;
+}
+
+
+/*if(isset($_GLOBALS['location']))
+    unset($_GLOBALS['location']);
+if(isset($_GLOBALS['canteenname']))
+    unset($_GLOBALS['canteenname']);
+unset($_GLOBALS['retrieve_query']);*/
+
 $result = $db->query($retrieve_query);
 
 $cid = $result->fetch_assoc();
 $cid = $cid['canteenid'];
 
+
+if($id == 2)
+{
+    $retrieve_location = "SELECT location FROM canteen where canteenid = '$cid'" ;
+    $location = $db->query($retrieve_location);
+    $location = $location->fetch_assoc();
+    $location = $location['location'];
+}
+
+
 $retrieve_query = "SELECT * FROM menu where canteenid = '$cid'" ;
 $result = $db->query($retrieve_query);
+
 
 $retrieve_comment = "SELECT * FROM comment where canteenid = '$cid'";
 $comments = $db->query($retrieve_comment);
@@ -38,7 +68,7 @@ while( $r = $result->fetch_assoc()) {
     $food_desc[$i][1] = $r['price'];
     $i++;
     //echo $r['menuname'];
-    //echo $r['price'];
+   //echo $r['price'];
     //echo $r['review'];
 }
 
@@ -53,12 +83,13 @@ while( $r = $comments->fetch_assoc()) {
     //echo $r['review'];
 }
 
-
+include ('navbar.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+
     <link rel="stylesheet" href="css/MenuItems.css">
     <meta charset="utf-8">
     <script type="text/javascript">
@@ -119,6 +150,12 @@ while( $r = $comments->fetch_assoc()) {
 
         function getData() {
 
+            var location = '<?php echo ($location) ?>';
+            //alert(location);
+            location = String(location).trim();
+            document.getElementById('canteenpic').src = location;
+
+
             name = '<?php echo ($name)?>';
             if(name == 'false')
             {
@@ -133,12 +170,24 @@ while( $r = $comments->fetch_assoc()) {
             }
 
             cid = '<?php echo ($cid) ?>';
-            var location = '<?php echo ($location) ?>';
+
             var food_data = <?php echo json_encode($food_desc)?>;
             var comment_data = <?php echo json_encode($comment)?>;
 
             var len = food_data.length;
             var comment_num = comment_data.length;
+
+           // alert(len);
+            //alert(comment_num);
+
+            if(len == 0)
+            {
+                document.getElementById('foodtable').style.display='none';
+            }
+            if(comment_num == 0)
+            {
+                document.getElementById('comments').style.display='none';
+            }
 
             for(var i=0; i<len; i++)
             {
@@ -183,15 +232,11 @@ while( $r = $comments->fetch_assoc()) {
 
             }
             document.getElementById('comments').style.pointerEvents = 'none';
-
-
-            document.getElementById('canteenpic').src = location;
         }
 
     </script>
 </head>
 <body onload="getData()">
-
 
     <center><img id="canteenpic" alt="Canteen Photo" height="5%" width="40%" align="absmiddle"></center>
     <div class="field-css">
@@ -204,13 +249,13 @@ while( $r = $comments->fetch_assoc()) {
                     <th>Price</th>
                 </tr>
             </table>
-
+        </div>
         <!--<fieldset><p id="name"></p></fieldset>
         <fieldset><p id="price"></p></fieldset> -->
 
 
 
-                <div id="comments" style="pointer-events:none"; >
+                <div id="comments" style="pointer-events:none">
 
                 </div>
 
@@ -221,14 +266,13 @@ while( $r = $comments->fetch_assoc()) {
                            onclick="setComment()">
                 </div>
             </fieldset>
-        <input type="button" id="LogInRedirection" value="Log in to see reviews" style= "font-size: 1em; color = GREEN;
-        display: block ; height:50px;
-        width:100%"
-               onclick="gotoLogIn()">
+        <center><input type="button" class="buttonclass" id="LogInRedirection" value="Log in to see reviews"
+               onclick="gotoLogIn()"></center>
 
 
     </div>
 
 </body>
 </html>
+
 

@@ -1,29 +1,38 @@
 <?php require ('Database.php'); ?>
 <?php
 
-print_r($_GET['adminid']);
+
 //if (isset($_POST["register"]))
 {
 
-    $imagename = $_GET['imagename'];
-    $imageid = $_GET['imageid'];
+    $imagename = $_POST['imagename'];
+    $imageid = $_POST['imageid'];
+    $adminid = $_POST['adminid'];
+    $canteenname = $_POST['canteenname'];
 
-    print "$imagename";
-    print "<br>$imageid";
+    print_r("$adminid");
+    print_r("$canteenname");
+    //echo "<br>$canteenname";
+    //echo "<br>$imageid";
+    //echo "<br>$imagename";
 
-    $uploaddir = '/var/www/html/FoodPage/';
+
+
+    //print "$imagename";
+   // print "<br>$imageid";
+
+    $uploaddir = 'images/';
     $uploadfile = $uploaddir . basename($_FILES['imagename']['name']);
 
     if (move_uploaded_file($_FILES['imagename']['tmp_name'], $uploadfile)) {
-        $ins_data = "INSERT INTO canteen (adminid, canteenid, canteenname, location)
-		VALUES ('testid2', 'testcid2', 'testname2', '$uploadfile')";
+        $ins_data = "INSERT INTO canteen (adminid, canteenname, location)
+		VALUES ('$adminid', '$canteenname', '$uploadfile')";
 
         $res = $db->query($ins_data);
 
         if($res == true)
         {
-            header("Location:temp.php");
-            exit;
+            //echo "$uploadfile";
             echo "Success";
         }
 

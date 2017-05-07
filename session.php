@@ -1,14 +1,5 @@
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "102938";
-	$dbname = "users";
-
-	$db = mysqli_connect($servername, $username, $password, $dbname);
-
-	if ($db -> connect_error){
-		die("connection failed ".$db->connect_error);
-	}
+	require ('Database.php');
 
 	session_start();// Starting Session
 	

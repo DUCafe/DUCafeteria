@@ -1,66 +1,5 @@
 <?php
 
-/*$servername = "localhost";
-$username = "root";
-$password = "102938";
-$dbname = "users";
-
-//create connection
-$db = new mysqli($servername, $username, $password, $dbname);
-
-//check connection
-if ($db -> connect_error){
-	die("connection failed ".$db->connect_error);
-}
-
-//success message
-echo "connected successfully"."<br>";
-
-
-//sql command to create a database named users
- $create_db = "CREATE DATABASE users";
-
-//executing command through query function
-/*if($db->query($create_db) == true)
-{
-	echo "DB created successfully";
-}
-else echo "Error creation ".$db->error."<br>"; */
-
-//create table commmand
-/*$create_table = "CREATE TABLE MYTABLE (
-	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	username VARCHAR(11) NOT NULL,
-	email VARCHAR(100) NOT NULL,
-	password VARCHAR(11) NOT NULL
-)"; */
-
-//executing command of creating table
-/*if($db->query($create_table) == true)
-	echo "table created. ". "<br>";
-else echo "error ".$db->error." <br>"; */
-
-//Inserting value to table
-/* $ins_data = "INSERT INTO MYTABLE (username, email, password)
-	VALUES ('HAPPY', 'h@yahoo.com', '12345')";
-
-if($db->query($ins_data) == true)
-	echo "inserted. ". "<br>";
-else echo "error ".$db->error." <br>"; */
-
-/* $del_data = "DELETE FROM MYTABLE WHERE username = 'HAPPY'";
-
-if($db->query($del_data) == true)
-	echo "deleted. ". "<br>";
-else echo "error ".$db->error." <br>";
-
-echo $_POST['username']."<br>";
-echo $_POST['email']."<br>";
-
-
-
-$db->close();*/
-
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +13,6 @@ $db->close();*/
 
 
     <link rel="stylesheet" href="css/style.css">
-
 
 
     <script type="text/javascript">
@@ -98,6 +36,13 @@ $db->close();*/
                 var imagename = document.getElementById("imageid").value;
                 var imageid = "imageid";
 
+                if(adminid=='' || name=='' || address=='' ||phone=='' || email == '' || pass1=='' ||
+                    pass2 == '' || imagename == '')
+                {
+                    alert("Please fill up all of the fields");
+                    return false;
+                }
+
 
                 var xhttp = new XMLHttpRequest();
                 var success = false;
@@ -112,8 +57,7 @@ $db->close();*/
                     {
 
                         var response = xhttp.responseText;
-                        document.getElementById("StatusLabel").style.display = "none";
-                        document.getElementById("regStatus").value = response;
+
                         console.log(response);
                         if (String(response.trim()) === "Success")
                         {
@@ -145,25 +89,43 @@ $db->close();*/
             }
             else if (id === 1)
             {
+                //alert("are you ok?");
                 var name = document.getElementById("ladminid").value;
                 var pass = document.getElementById("lpassword").value;
+                if(name==''||pass=='')
+                {
+                    alert("Please fill up all of the fields");
+                    return false;
+                }
+                //alert(name);
+                //alert(pass);
 
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-
+                var xhttp1 = new XMLHttpRequest();
+                console.log(xhttp1.readyState + " "+xhttp1.status);
+                xhttp1.onreadystatechange = function()
+                {
+                    console.log(xhttp1.readyState + " "+xhttp1.status);
                     if (this.readyState == 4 && this.status == 200) {
 
-                        var response1 = xhttp.responseText;
-                        document.getElementById("loginStatusLabel").style.display = "none";
-                        document.getElementById("loginStatus").value = response1;
-                        if (response1 == "Success") {
+                        var response1 = xhttp1.responseText;
 
-                            document.getElementById("formlogin").submit();
+                        //alert(response1);
+                        console.log(response1);
+                        if (String(response1).trim() == "Success") {
+
+                            //alert(response1);
+                            var location = window.location.href;
+                            //alert(location);
+
+                            location = location.substring(location.lastIndexOf('=')+1);
+                            //alert(location);
+                            window.location.href = location;
                         }
+
                     }
-                    xhttp.open("GET", "loginCafeDB.php?username1=" + name + "&password1=" + pass, true);
-                    xhttp.send();
                 }
+                xhttp1.open("GET", "loginCafeDB.php?username1=" + name + "&password1=" + pass, true);
+                xhttp1.send();
             }
         }
     </script>
@@ -201,19 +163,19 @@ $db->close();*/
         <li class="tab"><a href="#login">Log In</a></li>
     </ul>
 
-    <div class="tab-content">
+    <fieldset class="tab-content">
         <div id="signup">
             <h1>Sign Up for Free</h1>
 
             <form id = "registrationForm" action="upload.php" method="POST" enctype='multipart/form-data'>
 
 
-
+            <fieldset><legend style="color: #ffffff; padding:1em;"><h3>Admin Profile</h3></legend>
                 <div class="field-wrap">
                     <label>
                         AdminID<span class="req">*</span>
                     </label>
-                    <input id = "adminid" type="text" required autocomplete="off" />
+                    <input id = "adminid" name="adminid" type="text" required autocomplete="off" />
                 </div>
 
 
@@ -259,9 +221,16 @@ $db->close();*/
                     <input id = password22 type="password" required autocomplete="off"/>
 
                 </div>
+            </fieldset>
 
+
+                <fieldset><legend style="color: #ffffff; padding:1em;"><h3>Canteen Information</h3></legend>
                 <div class="field-wrap">
-
+                    <label>
+                        Canteen Name<span class="req">*</span>
+                    </label>
+                    <input id = "canteenname" name="canteenname" type="text" required autocomplete="off"/>
+                </div>
 
                 <div class="field-wrap">
                     <label hidden>
@@ -271,22 +240,16 @@ $db->close();*/
                            required
                            autocomplete="off"/>
                     <!--<input type='file' name="userFile" id="userFile" />-->
-                    <img id="photo" src="photo_default.png" height="50%" width="100%" alt="your image"
-                    />
+                    <img id="photo" src="photo_default.png" height="50%" width="100%" alt="your image"/>
 
                 </div>
-
-
+    </fieldset>
                 <div class="field-wrap">
-                    <label id="StatusLabel">Registration Status
-                    </label>
-                    <input id = "regStatus" type="text"/>
-                </div>
-
-                <input type = "button" id = "register" value="Get Started" class="button
+                <input type = "button" name="register" id = "register" value="Get Started" class="button
                 button-block" onclick="check1(0)"/>
                 <p id="warning"></p>
                     </div>
+
 
             </form>
 
@@ -300,7 +263,7 @@ $db->close();*/
                     <label>
                         AdminID<span class="req">*</span>
                     </label>
-                    <input id = "ladminid" type="text" name="username" class="textInput" required autocomplete="off"/>
+                    <input id = "ladminid" type="text" name="userid" class="textInput" required autocomplete="off"/>
                 </div>
 
                 <div class="field-wrap">

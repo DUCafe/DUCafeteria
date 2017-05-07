@@ -30,11 +30,14 @@
 
         function goto(location)
         {
-            window.location.href = "findMenu.php?location="+location;
+            //location.reload(true);
+            window.location.href = "findMenu.php?location="+location+"&id=1";
+            //return true;
         }
 
         function mysearch()
         {
+
             var name = document.getElementById("search").value;
             alert(name);
             var xhttp = new XMLHttpRequest();
@@ -45,16 +48,18 @@
                 {
 
                     var response1 = xhttp.responseText;
-                    document.getElementById("search").value = response1;
+                    //document.getElementById("search").value = response1;
                     if(String(response1.trim()) === "Success") {
 
-                        window.location.href = "welcome.php";
-
-
+                        //alert(canteenname1);
+                        document.getElementById('search').value = '';
+                        window.location.href = "findMenu.php?canteenname="+name+"&id=2";
+                        return;
                     }
                 }
             }
-            xhttp.open("GET", "search.php?canteenname1="+name, true);
+            xhttp.open("GET", "searchQuery.php?canteenname1="+name, true);
+            xhttp.setRequestHeader( "pragma", "no-cache" );
             xhttp.send();
         }
 
@@ -111,7 +116,7 @@
                 <!-- <li><a href="#menu" class="smoothScroll">SPECIAL MENU</a></li> -->
                 <li><a href="RegLoginUser.php" class="smoothScroll">Log In</a></li>
                 <li><a href="logout.php" class="smoothSroll">Log Out</a></li>
-                <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                <li><a href="Menu.php" class="smoothScroll">Update Menu</a></li>
 
             </ul>
 

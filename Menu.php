@@ -1,38 +1,133 @@
+<?php require ('Database.php'); ?>
+<?php
+
+session_start();
+$name;
+if(!isset($_SESSION['login_user']))
+{
+    $name = 'nothing';
+}
+else
+    $name = $_SESSION['login_user'];
+include ('navbar.php');
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 
    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-
-
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
     <meta charset="utf-8"/>
     <title>Sign-Up/Login Form</title>
 
-    <link rel="stylesheet" href="css/MenuStyle.css">
+    <link rel="stylesheet" href="css/MenuItems.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script>
+        function checksession() {
+            var name = '<?php echo "$name"?>';
+            if(name == 'nothing')
+            {
+                alert("Please login to continue...");
+                window.location.href= 'RegLoginCafe.php?back=Menu.php';
+                return false;
+            }
+            else
+            {
+                alert(name);
+                return true;
+            }
+        }
         con = 0;
-        function addItem(divname) {
-            if(con >= 10)
+        function addToDB()
+        {
+            var table = document.getElementById('menutable');
+            var tablerow = table.rows.length;
+            var myArray = [];
+            var a1, a2, a3, a4;
+
+            for(var i=1; i<tablerow; i++)
+            {
+                var oCells = table.rows.item(i).cells;
+                myArray.push([]);
+
+                for(var j = 0; j < 2; j++){
+                    /* get your cell info here */
+                    if(oCells.item(j).innerHTML.length == 0) {
+                        alert("Fill out all fields");
+                        return true;
+                    }
+                    myArray[i-1].push(oCells.item(j).innerHTML);
+                    //alert(myArray[i-1][j]);
+                }
+                for(var j=2; j<4; j++)
+                {
+                    myArray[i-1].push(oCells.item(j).firstChild.value) ;
+                    //alert(myArray[i-1][j]);
+                }
+            }
+            alert("OK");
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                console.log(xhttp.responseText);
+                if(this.status==200 && this.readyState==4)
+                {
+                    alert(xhttp.responseText);
+                }
+            }
+            xhttp.open("GET","addToMenu.php?data="+JSON.stringify(myArray)+"&len="+document.getElementById
+                ('menutable').rows.length, true);
+            xhttp.send();
+        }
+        function addItem(tablename) {
+            if(con >= 20)
                 alert("Limit exceeded!");
             else {
 
-                var newdiv = document.createElement('div');
-                var str1 = '<table><tr><th>Item Name</th><td><input id = "name" ' + (con+1) + ' type="text"' +
-                    '></td></tr>';
+                var table = document.getElementById(tablename);
+                var row = table.insertRow();
+                var cell = new Array();
 
-                var str2 = '<tr><th>Price</th><td><input type="text" id="price" ' + (con+1) +'></td></tr>';
 
-                var str3 = '<tr><th>Available From </th><td><input type="time" id="start" '+ (con+1) +
-                    ' value="09:00" ></td><th>&nbsp; To &nbsp;</th><td><input type="time" id="end"' + (con+1)
-                    +' value="18:00" ></td></tr></table>';
+                for(var i=0; i<2; i++)
+                {
+                    cell[i] = row.insertCell();
+                }
+                for(var i=2; i<4; i++)
+                {
+                    cell[i] = row.insertCell();
+                    cell[i].setAttribute('contenteditable', 'false');
+                }
 
-                newdiv.innerHTML = str1 + str2 + str3;
-                document.getElementById(divname).appendChild(newdiv);
+                var timevar1 = document.createElement('INPUT');
+                timevar1.setAttribute('type','time');
+                timevar1.setAttribute('value', '09:00');
+                cell[2].appendChild(timevar1);
+                //cell[2].contenteditable = "false";
+
+                var timevar2 = document.createElement('INPUT');
+                timevar2.setAttribute('type','time');
+                timevar2.setAttribute('value','18:00');
+                cell[3].appendChild(timevar2);
+                //cell[3].contenteditable = "false";
             }
+        }
+        function removeItem(tablename)
+        {
+
+            var table = document.getElementById(tablename);
+            var tablerow = table.rows.length;
+            if(tablerow == 3) {
+                alert("Sorry, Only 1 Row exists!");
+                return true;
+            }
+            else
+            table.deleteRow(-1);
         }
     </script>
 
@@ -42,75 +137,44 @@
 </head>
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>-->
 
-<body>
+<body background="images/home-bg.jpg" class="bodyclass" onload="checksession()">
 
-<div class="form">
 
-    <div id="Menu">
-        <h1>Menu Information</h1>
+    <div id="Menu" class="bodyclass">
+        <!--<center><h1 style="margin-top: 10%;">MENU</h1></center> -->
 
         </div id = "menuform" action="welcome.php" method="POST" enctype='multipart/form-data'>
 
-    <div id="tablemenu">
-
-        <table>
-            <tr>
+        <center><table id="menutable" contenteditable="true" style="margin-top: 10%">
+                <tr>
+                    <th colspan="4" style="text-align: center; font-size: 2em">Menu</th>
+                </tr>
+            <tr contenteditable="false">
                 <th>Item Name </th>
-                <td><input id = "name" type="text"></td>
-            </tr>
-            <tr>
                 <th>Price</th>
-                <td><input type="text" id="price"></td>
+                <th>Available From</th>
+                <th>Available To</th>
             </tr>
-
-            <tr>
-                <th>Available From </th><td><input type="time" id="start" value="09:00"></td>
-                <th>&nbsp;To&nbsp;</th><td><input type="time" id="end" value="18:00"></td>
+            <tr id="tr1">
+                <td></td>
+                <td></td>
+                <td contenteditable="false"><input type="time" value="09:00"></td>
+                <td contenteditable="false"><input type="time" value="18:00"></td>
             </tr>
+            </table></center>
 
-        </table>
-    </div>
-    <input type="button" id="add" class="button-block" value="Add more..." onclick="addItem
-            ('tablemenu')">
+    <center><input type="button" class="buttonclass" id="additem" name="additem" value="Add Item" onclick="addItem
+    ('menutable')"></center>
 
-        <!--<div class="column"><input id = "name" type="text" placeholder="Item"></div>
-        <div class="column"><input type="time" style="font-size: 19px"  id="start"></div> -
-        <div class="column"><input type="time" style="font-size: 19px"  id="end"></div>
-        <div class="column"><input type="text" id="price" placeholder="Price"></div>
-        <div class="column"><button id="add" onclick="addItem('addItem')"><img src="add.png" height="19px"
-                                                                               width="19px"></></div>
-
-               <!-- <datalist id="time">
-                    <option value="12:00"></option>
-                    <option value="01:00"></option>
-                    <option value="02:00"></option>
-                    <option value="03:00"></option>
-                    <option value="04:00"></option>
-                    <option value="05:00"></option>
-                    <option value="06:00"></option>
-                    <option value="07:00"></option>
-                    <option value="08:00"></option>
-                    <option value="09:00"></option>
-                    <option value="10:00"></option>
-                    <option value="11:00"></option>
-                </datalist>
-            <datalist id="when">
-                <option value="AM"></option>
-                <option value="PM"></option>
-            </datalist>
-
-            <div class="column"><input type="text" class="date start" list="time"/></div>
-            <div class="column"><input type="text" class="time start" list="when"/></div>
-            <div class="column"><input type="text" class="time end" list="time"/></div>
-            <div class="column"><input type="text" class="date end" list="when"/></div> -->
+    <center><input type="button" class="buttonclass" id="removeitem" name="removeitem" value="Remove Item"
+                   onclick="removeItem
+    ('menutable')"></center>
 
 
-
-            <input type="submit" value="submit" class="button-block">
+    <center><input type="submit" class="buttonclass" value="submit" class="button-block" onclick="addToDB()"></center>
 
         </form>
-    </div>
-</div>  <!-- /form -->
+    </div><!-- /form -->
 
 </body>
 </html>
