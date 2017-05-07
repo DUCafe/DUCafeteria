@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aafdc4d-289d-4976-844b-b3589e960523" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/gallery-img2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/tsc.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database.php" afterPath="$PROJECT_DIR$/Database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginCafe.php" afterPath="$PROJECT_DIR$/RegLoginCafe.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginUser.php" afterPath="$PROJECT_DIR$/RegLoginUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/MenuItems.css" afterPath="$PROJECT_DIR$/css/MenuItems.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/findMenu.php" afterPath="$PROJECT_DIR$/findMenu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firstpage.php" afterPath="$PROJECT_DIR$/firstpage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginCafeDB.php" afterPath="$PROJECT_DIR$/loginCafeDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regUserDB.php" afterPath="$PROJECT_DIR$/regUserDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,28 +34,8 @@
       <file leaf-file-name="RegLoginCafe.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuItems.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/MenuItems.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="355">
+              <caret line="116" column="60" lean-forward="true" selection-start-line="111" selection-start-column="27" selection-end-line="116" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -69,8 +44,8 @@
       <file leaf-file-name="RegLoginUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,69 +54,19 @@
       <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regUserDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regUserDB.php">
+      <file leaf-file-name="firstpage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstpage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-              <folding>
-                <marker date="1494144310642" expanded="true" signature="306:335" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="306:351" ph="SELECT * FRO... regtable" />
-                <marker date="1494144310642" expanded="true" signature="452:473" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:525" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:526" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:570" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="722:818" ph="INSERT INTO MYTABLE... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="findMenu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/findMenu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-681">
-              <caret line="141" column="28" lean-forward="true" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
-              <folding>
-                <marker date="1494133361590" expanded="true" signature="322:380" ph="SELECT cante... canteen" />
-                <marker date="1494133361590" expanded="true" signature="457:521" ph="SELECT cante... canteen" />
-                <marker date="1494133361590" expanded="true" signature="850:903" ph="SELECT locat... canteen" />
-                <marker date="1494133361590" expanded="true" signature="1059:1102" ph="SELECT * FRO... menu" />
-                <marker date="1494133361590" expanded="true" signature="1168:1214" ph="SELECT * FRO... comment" />
-                <marker date="1494133361590" expanded="true" signature="2235:2352" ph="{...}" />
-                <marker date="1494133361590" expanded="true" signature="2235:2434" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showNames.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/showNames.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <marker date="1494136294589" expanded="true" signature="345:366" ph="SELECT * FRO... canteen" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-              <folding>
-                <marker date="1494136437826" expanded="true" signature="52:73" ph="SELECT * FRO... canteen" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="114" column="29" lean-forward="true" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,8 +89,6 @@
       <find>$_get</find>
       <find>label</find>
       <find>font-size</find>
-      <find>input</find>
-      <find>table</find>
       <find>100%</find>
       <find>50</find>
       <find>100</find>
@@ -188,6 +111,8 @@
       <find>alert</find>
       <find>jquery</find>
       <find>toupper</find>
+      <find>table</find>
+      <find>input</find>
     </findStrings>
     <replaceStrings>
       <replace>file</replace>
@@ -232,7 +157,6 @@
         <option value="$PROJECT_DIR$/addComment.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/welcome.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/datalist.js" />
         <option value="$PROJECT_DIR$/session.php" />
         <option value="$PROJECT_DIR$/upload.php" />
@@ -244,12 +168,13 @@
         <option value="$PROJECT_DIR$/findMenu.php" />
         <option value="$PROJECT_DIR$/checkAdmin.php" />
         <option value="$PROJECT_DIR$/loginCafeDB.php" />
-        <option value="$PROJECT_DIR$/RegLoginCafe.php" />
-        <option value="$PROJECT_DIR$/firstpage.php" />
         <option value="$PROJECT_DIR$/showNames.php" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/css/MenuItems.css" />
         <option value="$PROJECT_DIR$/regUserDB.php" />
+        <option value="$PROJECT_DIR$/RegLoginCafe.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/MenuItems.css" />
+        <option value="$PROJECT_DIR$/firstpage.php" />
         <option value="$PROJECT_DIR$/RegLoginUser.php" />
         <option value="$PROJECT_DIR$/Database.php" />
       </list>
@@ -517,12 +442,12 @@
       <workItem from="1493958105644" duration="42880000" />
       <workItem from="1494030797757" duration="52959000" />
       <workItem from="1494097562698" duration="2104000" />
-      <workItem from="1494123395934" duration="20972000" />
+      <workItem from="1494123395934" duration="25364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317724000" />
+    <option name="totallyTimeSpent" value="322116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +462,7 @@
     <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27684963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28082737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -666,13 +591,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upload.js" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="69" column="2" lean-forward="false" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -904,22 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstpage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginCafeDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
@@ -940,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/MenuItems.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -958,8 +852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/regUserDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        <state relative-caret-position="199">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <marker date="1494144310642" expanded="true" signature="306:335" ph="SELECT * FRO... MYTABLE" />
             <marker date="1494144310642" expanded="true" signature="306:351" ph="SELECT * FRO... regtable" />
@@ -972,18 +866,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="109" column="17" lean-forward="true" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/MenuItems.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="70" column="19" lean-forward="false" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="116" column="60" lean-forward="true" selection-start-line="111" selection-start-column="27" selection-end-line="116" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="114" column="29" lean-forward="true" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>

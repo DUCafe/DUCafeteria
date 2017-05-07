@@ -99,14 +99,20 @@ $db->close();*/
                 var pass1 = document.getElementById("password11").value;
                 var pass2 = document.getElementById("password22").value;
                 var register = document.getElementById("register").value;
-                var reg = document.getElementById("reg").rows.item(1);
-                var reg1 = reg.cells.item(0).innerHTML;
-                var reg2 = reg.cells.item(1).innerHTML;
-                var reg3 = reg.cells.item(2).innerHTML;
+
+                var reg1 = document.getElementById("reg1").value;
+                var reg2 = document.getElementById("reg2").value;
+                var reg3 = document.getElementById("reg3").value;
+
                 var reg = reg1+'-'+reg2+'-'+reg3;
 
 
-                alert(reg1 + reg2 + reg3);
+                f(name=='' || email=='' || pass1=='' ||pass2=='' || reg1=='' || reg2==''||reg3=='')
+                {
+                    alert("Please fill up all of the fields");
+                    return false;
+                }
+
 
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function ()
@@ -126,7 +132,10 @@ $db->close();*/
                         else if(String(response).trim() == "reg")
                         {
                             alert("You are not a student of DU");
-                            return false;
+
+                            var location = window.location.href;
+                            location = location.substring(location.lastIndexOf('=')+1);
+                            window.location.href = location;
                         }
                     }
 
@@ -143,6 +152,12 @@ $db->close();*/
                 var name = document.getElementById("name2").value;
                 var pass = document.getElementById("password2").value;
 
+                if(name == '' || pass == '')
+                {
+                    alert("Please fill up all of the fields");
+                    return false;
+                }
+
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function ()
                 {
@@ -155,8 +170,9 @@ $db->close();*/
                         document.getElementById("loginStatus").value = response1;
                         if(String(response1.trim()) === "Success") {
 
-                            window.location.href = "firstpage.php";
-                            //document.getElementById("formlogin").submit();
+                            var location = window.location.href;
+                            location = location.substring(location.lastIndexOf('=')+1);
+                            window.location.href = location;
                         }
                     }
                 }
@@ -202,10 +218,10 @@ $db->close();*/
                 <div class="field-wrap">
                     <table id="reg" name="reg" class="tableclass">
                         <th colspan="3">Registration No.</th>
-                        <tr contenteditable="true">
-                            <td onkeyup="return (this.innerText.length <= 4)" contenteditable="true"></td>
-                            <td contenteditable="true"></td>
-                            <td contenteditable="true"></td>
+                        <tr>
+                        <td><input type="text" id="reg1" name="reg1" maxlength="4"></td>
+                        <td><input type="text" id="reg2" name="reg2" maxlength="3"></td>
+                        <td><input type="text" id="reg3" name="reg3" maxlength="3"></td>
                         </tr>
                     </table>
                 </div>

@@ -124,7 +124,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SignUp <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="about-us">
-                        <li><a href="RegLoginUser.php">Student</a></li>
+                        <li><a href="RegLoginUser.php?location=firstpage.php">Student</a></li>
                         <li><a href="RegLoginCafe.php?location=firstpage.php">Canteen Controller</a></li>
 
                     </ul>
@@ -134,7 +134,7 @@
                     <a href="#login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Log In <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="about-us">
-                        <li><a href="RegLoginUser.php">Student</a></li>
+                        <li><a href="RegLoginUser.php?location=firstpage.php">Student</a></li>
                         <li><a href="RegLoginCafe.php?location=firstpage.php">Canteen Controller</a></li>
 
                     </ul>

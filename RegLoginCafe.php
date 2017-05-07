@@ -116,7 +116,6 @@
                             //alert(location);
                             window.location.href = location;
                         }
-
                     }
                 }
                 xhttp1.open("GET", "loginCafeDB.php?username1=" + name + "&password1=" + pass + "&id=1", true);
