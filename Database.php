@@ -4,8 +4,8 @@ $servername = "localhost";
 $username = "ducafe";
 $password = "ducafe_db";
 $dbname = "ducafe";
-/*
-$servername = "localhost";
+
+/*$servername = "localhost";
 $username = "root";
 $password = "102938";
 $dbname = "users";*/

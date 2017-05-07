@@ -27,12 +27,53 @@
     <meta charset="UTF-8">
     <script type="text/javascript">
 
+        GetImageFromDB();
+
+        function GetImageFromDB() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function ()
+            {
+                if(this.status == 200 && this.readyState == 4)
+                {
+                    var response = JSON.parse(xhttp.responseText);
+                    //alert(response);
+
+                    response.forEach(function (item) {
+
+                        item = String(item).trim();
+                        //alert(item);
+
+                        var path = '"goto(\'' + item +'\')" ';
+                        var location = "findMenu.php?location=" + item + "&id=" + "1";
+
+                        //alert(path);
+                        //alert(location);
+
+                        var command ='<a href=' + location +'  data-lightbox-gallery="zenda-gallery"><img src="'+item
+                            +'" ' +
+                            ' alt="gallery img" ' +
+                            'onclick=' + path + '></a>';
+                       // alert(command);
+
+                        var div = document.createElement('div');
+                        div.innerHTML = command;
+                        div.class = "col-md-4 col-sm-4 wow fadeInUp";
+                        document.getElementById('pictures').appendChild(div);
+                    });
+                }
+            }
+            xhttp.open('GET', 'search.php?id=2', true);
+            xhttp.send();
+        }
+
 
         function goto(location)
         {
+            ///alert(location);
             //location.reload(true);
-            window.location.href = "findMenu.php?location="+location+"&id=1";
-            //return true;
+            //alert(window.location.href);
+            window.location.href = "findMenu.php?location="+location+"&id=" +'1';
+            return true;
         }
 
         function mysearch()
@@ -64,8 +105,8 @@
         }
 
         function isAdmin() {
-            var name = <?php echo "$name"?>;
-            //alert(name);
+            var name = '<?php echo "$name"?>';
+            alert(name);
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if(this.status == 200 && this.readyState == 4){
@@ -88,9 +129,9 @@
 
     <!--
 
-    http://www.tooplate.com/view/2076-zentro
+    http://www.tooplate.com/view/2076-zentro-->
 
-    -->
+    <link>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -134,7 +175,7 @@
                     <a href="#login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Log In <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="about-us">
-                        <li><a href="RegLoginUser.php?location=firstpage.php">Student</a></li>
+                        <li><a href="login_design.php?location=firstpage.php">Student</a></li>
                         <li><a href="RegLoginCafe.php?location=firstpage.php">Canteen Controller</a></li>
 
                     </ul>
@@ -199,14 +240,16 @@
 
 
 <!-- gallery section -->
-<section id="gallery" class="parallax-section">
-    <div class="container">
+<section id="gallery" class="parallax-section" onload="GetImageFromDB()">
+    <div class="container" id="pictures">
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
                 <h1 class="heading">Food Gallery</h1>
                 <hr>
             </div>
-            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+
+
+            <!--<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
                 <a href="findMenu.php?location='images/modhu.jpg'" data-lightbox-gallery="zenda-gallery"><img
                             src="images/modhu.jpg" alt="gallery img" onclick="goto('images/modhu.jpg')"></a>
                 <div>
@@ -241,90 +284,11 @@
                     <h3>Lemon-Rosemary Pizza</h3>
                     <span>Pasta / Rosemary / Green</span>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
 
-<!-- contact section -->
-<section id="contact" class="parallax-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
-                <h1 class="heading">Contact Us</h1>
-                <hr>
-            </div>
-            <div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-                <form action="#" method="post">
-                    <div class="col-md-6 col-sm-6">
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Name">
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <input name="email" type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                        <textarea name="message" rows="8" class="form-control" id="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-                        <input name="submit" type="submit" class="form-control" id="submit" value="make a reservation">
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-2 col-sm-1"></div>
-        </div>
-    </div>
-</section>
-
-
-<!-- footer section -->
-<footer class="parallax-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-                <h2 class="heading">Contact Info.</h2>
-                <div class="ph">
-                    <p><i class="fa fa-phone"></i> Phone</p>
-                    <h4>090-080-0760</h4>
-                </div>
-                <div class="address">
-                    <p><i class="fa fa-map-marker"></i> Our Location</p>
-                    <h4>120 Duis aute irure, California, USA</h4>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-                <h2 class="heading">Open Hours</h2>
-                <p>Sunday <span>10:30 AM - 10:00 PM</span></p>
-                <p>Mon-Fri <span>9:00 AM - 8:00 PM</span></p>
-                <p>Saturday <span>11:30 AM - 10:00 PM</span></p>
-            </div>
-            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-                <h2 class="heading">Follow Us</h2>
-                <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
-                    <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.6s"></a></li>
-                    <li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="0.9s"></a></li>
-                    <li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="0.9s"></a></li>
-                    <li><a href="#" class="fa fa-github wow bounceIn" data-wow-delay="0.9s"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-<!-- copyright section -->
-<section id="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <h3>ZENTRO</h3>
-                <p>Copyright © Zentro Restaurant and Cafe
-
-                    | Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- JAVASCRIPT JS FILES -->
 <script src="js/bootstrap.min.js"></script>

@@ -107,7 +107,7 @@ $db->close();*/
                 var reg = reg1+'-'+reg2+'-'+reg3;
 
 
-                f(name=='' || email=='' || pass1=='' ||pass2=='' || reg1=='' || reg2==''||reg3=='')
+                if(name=='' || email=='' || pass1=='' ||pass2=='' || reg1=='' || reg2==''||reg3=='')
                 {
                     alert("Please fill up all of the fields");
                     return false;
@@ -171,8 +171,10 @@ $db->close();*/
                         if(String(response1.trim()) === "Success") {
 
                             var location = window.location.href;
+                            alert(location);
                             location = location.substring(location.lastIndexOf('=')+1);
                             window.location.href = location;
+                            alert(location);
                         }
                     }
                 }

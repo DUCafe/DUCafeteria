@@ -9,7 +9,7 @@ if(!isset($_SESSION['login_user']))
 }
 else
     $name = $_SESSION['login_user'];
-include ('navbar.php');
+//include ('navbar.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +24,6 @@ include ('navbar.php');
     <title>Sign-Up/Login Form</title>
 
     <link rel="stylesheet" href="css/MenuItems.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script>
         function checksession() {
@@ -97,22 +95,25 @@ include ('navbar.php');
                 for(var i=0; i<2; i++)
                 {
                     cell[i] = row.insertCell();
+                    //cell[i].contenteditable = true;
                 }
                 for(var i=2; i<4; i++)
                 {
                     cell[i] = row.insertCell();
-                    cell[i].setAttribute('contenteditable', 'false');
+                   // cell[i].setAttribute('contenteditable', 'false');
                 }
 
                 var timevar1 = document.createElement('INPUT');
                 timevar1.setAttribute('type','time');
                 timevar1.setAttribute('value', '09:00');
+                timevar1.setAttribute('style', 'font-size: 2rem');
                 cell[2].appendChild(timevar1);
                 //cell[2].contenteditable = "false";
 
                 var timevar2 = document.createElement('INPUT');
                 timevar2.setAttribute('type','time');
                 timevar2.setAttribute('value','18:00');
+                timevar2.setAttribute('style', 'font-size: 2rem');
                 cell[3].appendChild(timevar2);
                 //cell[3].contenteditable = "false";
             }
@@ -127,7 +128,7 @@ include ('navbar.php');
                 return true;
             }
             else
-            table.deleteRow(-1);
+                table.deleteRow(-1);
         }
     </script>
 
@@ -137,7 +138,7 @@ include ('navbar.php');
 </head>
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>-->
 
-<body background="images/home-bg.jpg" class="bodyclass" onload="checksession()">
+<body onload="checksession()" background="images/home-bg.jpg">
 
 
     <div id="Menu" class="bodyclass">
@@ -145,9 +146,9 @@ include ('navbar.php');
 
         </div id = "menuform" action="welcome.php" method="POST" enctype='multipart/form-data'>
 
-        <center><table id="menutable" contenteditable="true" style="margin-top: 10%">
+        <center><table id="menutable" contenteditable="true">
                 <tr>
-                    <th colspan="4" style="text-align: center; font-size: 2em">Menu</th>
+                    <th colspan="4" contenteditable="false" style="font-size: 2em">Menu</th>
                 </tr>
             <tr contenteditable="false">
                 <th>Item Name </th>
@@ -158,8 +159,8 @@ include ('navbar.php');
             <tr id="tr1">
                 <td></td>
                 <td></td>
-                <td contenteditable="false"><input type="time" value="09:00"></td>
-                <td contenteditable="false"><input type="time" value="18:00"></td>
+                <td contenteditable="false"><input type="time" value="09:00" style="font-size: 2rem;"></td>
+                <td contenteditable="false"><input type="time" value="18:00" style="font-size: 2rem;"></td>
             </tr>
             </table></center>
 

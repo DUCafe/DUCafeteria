@@ -16,18 +16,30 @@ global $retrieve_query;
 global $location;
 global $canteenname;
 
-
 $id = $_GET['id'];
+
 if($id == 1)
 {
     $location = $_GET['location'];
     $retrieve_query = "SELECT canteenid FROM canteen where location = '$location'" ;
+
 }
-else
+if($id == 2)
 {
     $canteenname = $_GET['canteenname'];
     $retrieve_query = "SELECT canteenid FROM canteen where canteenname = '$canteenname'" ;
+
+    $retrieve_location = "SELECT location FROM canteen where canteenid = '$cid'" ;
+    $location = $db->query($retrieve_location);
+    $location = $location->fetch_assoc();
+    $location = $location['location'];
 }
+
+/*else
+{
+    $canteenname = $_GET['canteenname'];
+    $retrieve_query = "SELECT canteenid FROM canteen where canteenname = '$canteenname'" ;
+}*/
 
 
 /*if(isset($_GLOBALS['location']))
@@ -41,14 +53,6 @@ $result = $db->query($retrieve_query);
 $cid = $result->fetch_assoc();
 $cid = $cid['canteenid'];
 
-
-if($id == 2)
-{
-    $retrieve_location = "SELECT location FROM canteen where canteenid = '$cid'" ;
-    $location = $db->query($retrieve_location);
-    $location = $location->fetch_assoc();
-    $location = $location['location'];
-}
 
 
 $retrieve_query = "SELECT * FROM menu where canteenid = '$cid'" ;
@@ -85,16 +89,17 @@ while( $r = $comments->fetch_assoc()) {
     //echo $r['review'];
 }
 
-include ('navbar.php');
+//include ('navbar.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 
-    <link rel="stylesheet" href="css/MenuItems.css">
+    <link rel="stylesheet" href="css/CafeDetails.css">
     <meta charset="utf-8">
     <script type="text/javascript">
+
         var comment_num;
         name = '<?php echo ($name)?>';
         cid = '<?php echo ($cid) ?>';
@@ -122,10 +127,12 @@ include ('navbar.php');
 
                             var oldcomment = document.createElement("input");
 
-                            var label = document.createElement('LEGEND');
-                            label.innerHTML = "<br>"+name.toUpperCase()+" :   ";
-                            label.setAttribute('style', "display:block");
-                            //label.setAttribute('class','textbox');
+                            var label = document.createElement("LEGEND");
+                            //label.setAttribute('value',name);
+                            label.setAttribute('value', name);
+                            //label.innerHTML = name.toUpperCase()+" : ";
+                            //label.setAttribute('style', "display:block");
+                            label.setAttribute('class','textbox');
 
 
                             //alert(name);
@@ -136,7 +143,8 @@ include ('navbar.php');
                             //new XMLSerializer().serializeToString(oldcomment);
 
                             document.getElementById('comments').appendChild(oldcomment);
-                            document.getElementById('comments').insertBefore(label, oldcomment);
+                            document.getElementById('comments').appendChild(label);
+                            //document.getElementById('comments').insertBefore(label, oldcomment);
                             document.getElementById('mycomment').value = '';
 
                             //var breakline = document.createElement("br");
@@ -154,7 +162,7 @@ include ('navbar.php');
         }
 
         function  gotoLogIn() {
-            window.location.href = "RegLoginUser.php";
+            window.location.href = "RegLoginUser.php?location=findMenu.php";
         }
 
         function getData() {
@@ -168,10 +176,11 @@ include ('navbar.php');
             //alert(comment_num);
 
 
-            var location = '<?php echo ($location) ?>';
-            //alert(location);
-            location = String(location).trim();
+            var location = '<?php echo "$location"?>';
+            alert(location);
+            //location = String(location).trim();
             document.getElementById('canteenpic').src = location;
+            //alert(location);
 
             if(name == 'nothing')
             {
@@ -213,12 +222,13 @@ include ('navbar.php');
                 var oldcomment = document.createElement("input");
 
                 var label = document.createElement('LEGEND');
-                label.innerHTML = "<br>"+comment_data[i][0]+" :   ";
-                label.setAttribute('style', "display:block");
-                //label.setAttribute('class','textbox');
+                label.innerHTML = comment_data[i][0]+" said:   ";
+                label.setAttribute('style', " font-size:2em");
+                label.setAttribute('class','textbox');
 
                 oldcomment.setAttribute('type', 'text');
                 oldcomment.setAttribute('class', 'textbox');
+                oldcomment.setAttribute('style', "display:block; font-size:2em");
                 oldcomment.setAttribute('value', comment_data[i][1]);
 
                 //var breakline = document.createElement("br");
@@ -242,42 +252,37 @@ include ('navbar.php');
 
     </script>
 </head>
-<body onload="getData()">
+<body onload="getData()" background="images/home-bg.jpg" class="bodyclass">
 
-    <center><img id="canteenpic" alt="Canteen Photo" height="5%" width="40%" align="absmiddle"></center>
-    <div class="field-css">
-        <fieldset><strong><legend id="lid">Item Description</legend></strong>
+    <center><img id="canteenpic" alt="Canteen Photo" height="5%" width="40%"></center>
+    <div class="field-css" id="maindiv">
+        <fieldset><strong><center><legend id="lid" style="color:#051508; font-size: 2rem">Item
+                        Description</center></legend></strong>
+        <div class="field-css">
 
+            <fieldset>
+                <center><table id="foodtable" class="tableclass">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Available From</th>
+                        <th>Available To</th>
+                    </tr>
+                </table>
 
-            <table id="foodtable">
-                <tr>
-                    <th>Item Name</th>
-                    <th>Price</th>
-                    <th>Available From</th>
-                    <th>Available To</th>
-                </tr>
-            </table>
-        </div>
-        <!--<fieldset><p id="name"></p></fieldset>
-        <fieldset><p id="price"></p></fieldset> -->
-
-
-
-                <div id="comments" style="pointer-events:none">
-
-                </div>
+                <div id="comments" style="pointer-events:none"></div>
 
                 <div id="mycommmentdiv">
-                <textarea id="mycomment" rows="5" cols="160" placeholder="Write a comment..."
-                          style="border: groove"></textarea><br>
-                    <input type="button" id="SubmitComment" value="Enter" style="float: right; height:50px;width:200px"
-                           onclick="setComment()">
-                </div>
+                    <textarea id="mycomment" rows="6" cols="160" placeholder="Write a comment..."
+                              style="border: groove"></textarea>
+                    <input type="button" class="buttonclass" id="SubmitComment" value="Enter"
+                               onclick="setComment()">
+                </div></center>
             </fieldset>
-        <center><input type="button" class="buttonclass" id="LogInRedirection" value="Log in to see reviews"
+            <center><input type="button" class="buttonclass" id="LogInRedirection" value="Log in to see reviews"
                onclick="gotoLogIn()"></center>
-
-
+        </fieldset>
+    </div>
     </div>
 
 </body>

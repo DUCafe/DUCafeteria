@@ -6,12 +6,12 @@ http://www.tooplate.com/view/2076-zentro
 
 */
 body
-	{
-		background: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    position: relative;
-	}
+{
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  position: relative;
+}
 
 .heading {
   font-size: 22px;
@@ -32,13 +32,13 @@ p {
 }
 
 hr {
-	border-top: 2px solid #828282;
-	width: 120px;
+  border-top: 2px solid #828282;
+  width: 120px;
 }
 
 #menu, #gallery, #team {
-	padding-top: 100px;
-	padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 #menu, #contact {
   background: #f0f0f0;
@@ -51,50 +51,50 @@ hr {
 
 /* preloader section */
 .preloader  {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 99999;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row nowrap;
-            -ms-flex-flow: row nowrap;
-                flex-flow: row nowrap;
-        -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
-        background: none repeat scroll 0 0 #fff;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #fff;
+}
 .sk-spinner-pulse {
   width: 40px;
   height: 40px;
   background-color: #F6D76B;
   border-radius: 100%;
   -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
-          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+  animation: sk-pulseScaleOut 1s infinite ease-in-out; }
 
 @-webkit-keyframes sk-pulseScaleOut {
   0% {
     -webkit-transform: scale(0);
-            transform: scale(0); }
+    transform: scale(0); }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0; } }
 
 @keyframes sk-pulseScaleOut {
   0% {
     -webkit-transform: scale(0);
-            transform: scale(0); }
+    transform: scale(0); }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0; } }
 
 
@@ -132,8 +132,8 @@ hr {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100vh;
   text-align: center;
 }
@@ -372,12 +372,12 @@ button:active {
   padding-top: 24px;
 }
 #team .col-md-4 {
- padding-top: 42px;
+  padding-top: 42px;
 }
 
 /* menu section */
 #menu h4 {
-	line-height: 1.5;
+  line-height: 1.5;
 }
 #menu .col-md-8 {
   padding-bottom: 42px;
