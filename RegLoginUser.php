@@ -172,8 +172,24 @@ $db->close();*/
 
                             var location = window.location.href;
                             //alert(location);
-                            location = location.substring(location.lastIndexOf('=')+1);
-                            window.location.href = location;
+                            location = location.substring(location.lastIndexOf('?')+1);
+                            str1 = location.substring(location.lastIndexOf('&')+1); //id=
+                            str2 = location.substring(0,location.indexOf('&'));
+
+                            str11 = str2.substring(0, location.indexOf('=')); //location
+                            str12 = str2.substring(location.indexOf('=')+1 , str2.length);
+
+                            //alert(str1);
+                            //alert(str2);
+
+                            strrr = "findMenu.php?"+str11+"="+str12+"&"+ str1;
+
+
+                            //alert(strrr);
+                            window.location.href = strrr;
+
+                            //alert(location);
+                            //window.location.href = location+"?location=";
                             //alert(location);
                         }
                     }

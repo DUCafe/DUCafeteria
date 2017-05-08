@@ -1,8 +1,8 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/showNames.js"></script>
+    <script src="js/showNames.js"></script>
 </head>
-<link rel="stylesheet" href="showname.css">
+<link rel="stylesheet" href="css/showname.css">
 <html lang="en">
 
 <table id="racetimes">
@@ -24,8 +24,8 @@ while( $r = $result->fetch_assoc() ) {
     //$usernames[$i] = $r['CanteenName'];
     //$i++;
         ?>
-        <tr class='clickable-row' data-href='"findMenu.php?canteenname="+name+"&id=2"'>
-            <td><?php echo $name; ?></td>
+        <tr>
+        <td><a href=<?php echo "findMenu.php?canteenname=".$name."&id=2"?> > <?php echo "$name"?> </a></td>
         </tr>
 <?php
 

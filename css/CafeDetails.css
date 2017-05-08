@@ -1,5 +1,6 @@
 .bodyclass{
     color: #ecfff8;
+    width:100%;
 }
 
 .buttonclass {
@@ -23,9 +24,8 @@
     display: inline-block;
     row-span: 3;
     font-size: 8rem;
+
     background: #eeffae;
-    border: 1px solid #2c3749;
-    border-radius: 1px;
     color: #051508;
     height:5px;
     width:100%;
@@ -39,7 +39,6 @@
     display: inline-block;
     padding-top: 10%;
     width:80%;
-    border: 1px solid #2c3749;
     padding: 5% 5% 5% 5%;
     background: #eeffae;
     font-family: "Times New Roman", Times, serif;

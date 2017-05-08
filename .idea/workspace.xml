@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aafdc4d-289d-4976-844b-b3589e960523" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/gallert-img2.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database.php" afterPath="$PROJECT_DIR$/Database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Menu.php" afterPath="$PROJECT_DIR$/Menu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginUser.php" afterPath="$PROJECT_DIR$/RegLoginUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/canteen.php" afterPath="$PROJECT_DIR$/canteen.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/CafeDetails.css" afterPath="$PROJECT_DIR$/css/CafeDetails.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/findMenu.php" afterPath="$PROJECT_DIR$/findMenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firstpage.php" afterPath="$PROJECT_DIR$/firstpage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/datalist.js" afterPath="$PROJECT_DIR$/js/datalist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showNames.php" afterPath="$PROJECT_DIR$/showNames.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload.php" afterPath="$PROJECT_DIR$/upload.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,25 +37,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="searchQuery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searchQuery.php">
+      <file leaf-file-name="findMenu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/findMenu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="307">
+              <caret line="295" column="99" lean-forward="false" selection-start-line="295" selection-start-column="99" selection-end-line="295" selection-end-column="99" />
               <folding>
-                <marker date="1494062583720" expanded="true" signature="191:248" ph="SELECT * FRO... canteen" />
+                <marker date="1494220328252" expanded="true" signature="322:380" ph="SELECT cante... canteen" />
+                <marker date="1494220328252" expanded="true" signature="466:530" ph="SELECT cante... canteen" />
+                <marker date="1494220328252" expanded="true" signature="611:675" ph="SELECT cante... canteen" />
+                <marker date="1494220328252" expanded="true" signature="1003:1056" ph="SELECT locat... canteen" />
+                <marker date="1494220328252" expanded="true" signature="1238:1281" ph="SELECT * FRO... menu" />
+                <marker date="1494220328252" expanded="true" signature="1347:1393" ph="SELECT * FRO... comment" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/session.php">
+      <file leaf-file-name="addComment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addComment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="360">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <marker date="1494058966987" expanded="true" signature="244:303" ph="SELECT usern... MYTABLE" />
+                <marker date="1494007989417" expanded="true" signature="366:435" ph="INSERT INTO comment... " />
+                <marker date="1494007989417" expanded="true" signature="366:445" ph="INSERT INTO comment... " />
+                <marker date="1494007989417" expanded="true" signature="366:475" ph="INSERT INTO comment... " />
+                <marker date="1494007989417" expanded="true" signature="366:509" ph="INSERT INTO comment... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firstpage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firstpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="164" column="37" lean-forward="true" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addToMenu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addToMenu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <marker date="1494098011354" expanded="true" signature="410:450" ph="SELECT FROM admin" />
+                <marker date="1494098011354" expanded="true" signature="476:576" ph="SELECT cante... canteen" />
+                <marker date="1494098011354" expanded="true" signature="476:577" ph="SELECT cante... canteen" />
+                <marker date="1494098011354" expanded="true" signature="476:581" ph="SELECT cante... canteen" />
+                <marker date="1494098011354" expanded="true" signature="476:582" ph="SELECT cante... canteen" />
+                <marker date="1494098011354" expanded="true" signature="956:1092" ph="INSERT INTO menu... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <marker date="1494212177451" expanded="true" signature="553:658" ph="INSERT INTO canteen... " />
               </folding>
             </state>
           </provider>
@@ -54,37 +121,9 @@
       <file leaf-file-name="RegLoginCafe.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firstpage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstpage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regUserDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regUserDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <marker date="1494144310642" expanded="true" signature="306:335" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="306:351" ph="SELECT * FRO... regtable" />
-                <marker date="1494144310642" expanded="true" signature="452:473" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:525" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:526" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="452:570" ph="SELECT * FRO... MYTABLE" />
-                <marker date="1494144310642" expanded="true" signature="722:818" ph="INSERT INTO MYTABLE... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,38 +131,8 @@
       <file leaf-file-name="RegLoginUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkAdmin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="canteen.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canteen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datalist.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/datalist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            <state relative-caret-position="2916">
+              <caret line="187" column="30" lean-forward="false" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -132,11 +141,21 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <marker date="1494151959341" expanded="true" signature="72:93" ph="SELECT * FRO... canteen" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datalist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/datalist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,9 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>home</find>
-      <find>getelementbyid</find>
-      <find>json</find>
       <find>goto</find>
       <find>$</find>
       <find>center</find>
@@ -172,7 +188,6 @@
       <find>location</find>
       <find>textb</find>
       <find>color</find>
-      <find>style</find>
       <find>css</find>
       <find>buttonclass</find>
       <find>textbox</find>
@@ -182,7 +197,11 @@
       <find>strong</find>
       <find>cafede</find>
       <find>false</find>
+      <find>style</find>
+      <find>fieldset</find>
+      <find>80</find>
       <find>alert</find>
+      <find>restau</find>
     </findStrings>
     <replaceStrings>
       <replace>file</replace>
@@ -218,7 +237,6 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/loginUserDB.php" />
         <option value="$PROJECT_DIR$/regCafeDB.php" />
-        <option value="$PROJECT_DIR$/canteen.php" />
         <option value="$PROJECT_DIR$/css/MenuStyle.css" />
         <option value="$PROJECT_DIR$/temp.php" />
         <option value="$PROJECT_DIR$/js/gotoMenu.js" />
@@ -227,29 +245,30 @@
         <option value="$PROJECT_DIR$/addComment.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
         <option value="$PROJECT_DIR$/session.php" />
-        <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/searchQuery.php" />
         <option value="$PROJECT_DIR$/CommonMenu.php" />
         <option value="$PROJECT_DIR$/addToMenu.php" />
         <option value="$PROJECT_DIR$/navbar.php" />
         <option value="$PROJECT_DIR$/checkAdmin.php" />
         <option value="$PROJECT_DIR$/loginCafeDB.php" />
-        <option value="$PROJECT_DIR$/showNames.php" />
         <option value="$PROJECT_DIR$/regUserDB.php" />
         <option value="$PROJECT_DIR$/RegLoginCafe.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/Menu.php" />
         <option value="$PROJECT_DIR$/css/MenuItems.css" />
         <option value="$PROJECT_DIR$/css/style_firstpage.css" />
         <option value="$PROJECT_DIR$/login_design.php" />
-        <option value="$PROJECT_DIR$/firstpage.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/CafeDetails.css" />
-        <option value="$PROJECT_DIR$/findMenu.php" />
+        <option value="$PROJECT_DIR$/canteen.php" />
+        <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/Database.php" />
-        <option value="$PROJECT_DIR$/RegLoginUser.php" />
+        <option value="$PROJECT_DIR$/showNames.php" />
+        <option value="$PROJECT_DIR$/css/CafeDetails.css" />
         <option value="$PROJECT_DIR$/js/datalist.js" />
+        <option value="$PROJECT_DIR$/RegLoginUser.php" />
+        <option value="$PROJECT_DIR$/findMenu.php" />
+        <option value="$PROJECT_DIR$/firstpage.php" />
+        <option value="$PROJECT_DIR$/Menu.php" />
       </list>
     </option>
   </component>
@@ -300,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -371,6 +389,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,12 +537,13 @@
       <workItem from="1494123395934" duration="38797000" />
       <workItem from="1494164359560" duration="14096000" />
       <workItem from="1494181121110" duration="2826000" />
-      <workItem from="1494203672389" duration="1724000" />
+      <workItem from="1494203672389" duration="11577000" />
+      <workItem from="1494223345148" duration="1822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354195000" />
+    <option name="totallyTimeSpent" value="365870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,16 +558,16 @@
     <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19093078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19411297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -603,6 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="5" column="961" lean-forward="true" selection-start-line="5" selection-start-column="961" selection-end-line="5" selection-end-column="961" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -656,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -678,19 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addComment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <marker date="1494007989417" expanded="true" signature="366:435" ph="INSERT INTO comment... " />
-            <marker date="1494007989417" expanded="true" signature="366:445" ph="INSERT INTO comment... " />
-            <marker date="1494007989417" expanded="true" signature="366:475" ph="INSERT INTO comment... " />
-            <marker date="1494007989417" expanded="true" signature="366:509" ph="INSERT INTO comment... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searchCafe.js" />
     <entry file="file://$PROJECT_DIR$/CommonMenu.php" />
     <entry file="file://$PROJECT_DIR$/profile.php">
@@ -698,21 +699,6 @@
         <state relative-caret-position="90">
           <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addToMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding>
-            <marker date="1494098011354" expanded="true" signature="410:450" ph="SELECT FROM admin" />
-            <marker date="1494098011354" expanded="true" signature="476:576" ph="SELECT cante... canteen" />
-            <marker date="1494098011354" expanded="true" signature="476:577" ph="SELECT cante... canteen" />
-            <marker date="1494098011354" expanded="true" signature="476:581" ph="SELECT cante... canteen" />
-            <marker date="1494098011354" expanded="true" signature="476:582" ph="SELECT cante... canteen" />
-            <marker date="1494098011354" expanded="true" signature="956:1092" ph="INSERT INTO menu... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,16 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/showNames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <marker date="1494136294589" expanded="true" signature="345:366" ph="SELECT * FRO... canteen" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/MenuStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -794,14 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="115" column="24" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,40 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/CafeDetails.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
           <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/findMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="96" column="1" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
-          <folding>
-            <marker date="1494182744380" expanded="true" signature="322:380" ph="SELECT cante... canteen" />
-            <marker date="1494182744380" expanded="true" signature="466:530" ph="SELECT cante... canteen" />
-            <marker date="1494182744380" expanded="true" signature="612:676" ph="SELECT cante... canteen" />
-            <marker date="1494182744380" expanded="true" signature="1004:1057" ph="SELECT locat... canteen" />
-            <marker date="1494182744380" expanded="true" signature="1239:1282" ph="SELECT * FRO... menu" />
-            <marker date="1494182744380" expanded="true" signature="1348:1394" ph="SELECT * FRO... comment" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -910,16 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searchQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1494062583720" expanded="true" signature="191:248" ph="SELECT * FRO... canteen" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -927,30 +855,6 @@
           <folding>
             <marker date="1494058966987" expanded="true" signature="244:303" ph="SELECT usern... MYTABLE" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canteen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstpage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,26 +874,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
+    <entry file="file://$PROJECT_DIR$/checkAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
+    <entry file="file://$PROJECT_DIR$/canteen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="34" />
+        <state relative-caret-position="130">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showNames.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="98" lean-forward="false" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
+          <folding>
+            <marker date="1494215254381" expanded="true" signature="351:372" ph="SELECT * FRO... canteen" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/CafeDetails.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1494062583720" expanded="true" signature="191:248" ph="SELECT * FRO... canteen" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <marker date="1494151959341" expanded="true" signature="72:93" ph="SELECT * FRO... canteen" />
           </folding>
@@ -998,8 +940,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/datalist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        <state relative-caret-position="720">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1494212177451" expanded="true" signature="553:658" ph="INSERT INTO canteen... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2916">
+          <caret line="187" column="30" lean-forward="false" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addComment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1494007989417" expanded="true" signature="366:435" ph="INSERT INTO comment... " />
+            <marker date="1494007989417" expanded="true" signature="366:445" ph="INSERT INTO comment... " />
+            <marker date="1494007989417" expanded="true" signature="366:475" ph="INSERT INTO comment... " />
+            <marker date="1494007989417" expanded="true" signature="366:509" ph="INSERT INTO comment... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="295" column="99" lean-forward="false" selection-start-line="295" selection-start-column="99" selection-end-line="295" selection-end-column="99" />
+          <folding>
+            <marker date="1494220328252" expanded="true" signature="322:380" ph="SELECT cante... canteen" />
+            <marker date="1494220328252" expanded="true" signature="466:530" ph="SELECT cante... canteen" />
+            <marker date="1494220328252" expanded="true" signature="611:675" ph="SELECT cante... canteen" />
+            <marker date="1494220328252" expanded="true" signature="1003:1056" ph="SELECT locat... canteen" />
+            <marker date="1494220328252" expanded="true" signature="1238:1281" ph="SELECT * FRO... menu" />
+            <marker date="1494220328252" expanded="true" signature="1347:1393" ph="SELECT * FRO... comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addToMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1494098011354" expanded="true" signature="410:450" ph="SELECT FROM admin" />
+            <marker date="1494098011354" expanded="true" signature="476:576" ph="SELECT cante... canteen" />
+            <marker date="1494098011354" expanded="true" signature="476:577" ph="SELECT cante... canteen" />
+            <marker date="1494098011354" expanded="true" signature="476:581" ph="SELECT cante... canteen" />
+            <marker date="1494098011354" expanded="true" signature="476:582" ph="SELECT cante... canteen" />
+            <marker date="1494098011354" expanded="true" signature="956:1092" ph="INSERT INTO menu... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="164" column="37" lean-forward="true" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
           <folding />
         </state>
       </provider>

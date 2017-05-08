@@ -10,7 +10,7 @@ var dataList = document.getElementById('json-datalist');
         if (request.readyState === 4) {
             if (request.status === 200) {
                 // Parse the JSON
-                var jsonOptions = request.responseText;
+                var jsonOptions = JSON.parse(request.responseText);
                 // Loop over the JSON array.
                 jsonOptions.forEach(function (item) {
                     // Create a new <option> element.
@@ -34,7 +34,7 @@ var dataList = document.getElementById('json-datalist');
     input.placeholder = "Loading options...";
 
 // Set up and make the request.
-    request.open('GET', 'search.php', true);
+    request.open('GET', 'search.php?id=3', true);
     request.send();
 
 

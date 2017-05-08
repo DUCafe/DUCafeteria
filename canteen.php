@@ -84,10 +84,6 @@
                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
                 xhttp.send();
-
-
-
-
             }
 
         }

@@ -31,7 +31,6 @@ if($id == 2)
 }
 
 
-
 /*else
 {
     $canteenname = $_GET['canteenname'];
@@ -137,8 +136,8 @@ while( $r = $comments->fetch_assoc()) {
                             var label = document.createElement("LEGEND");
                             //label.setAttribute('value',name);
                             label.setAttribute('value', name);
-                            //label.innerHTML = name.toUpperCase()+" : ";
-                            //label.setAttribute('style', "display:block");
+                            label.innerHTML = name.toUpperCase()+" : ";
+                            label.setAttribute('style', "display:block; font-size:2em");
                             label.setAttribute('class','textbox');
 
 
@@ -147,11 +146,12 @@ while( $r = $comments->fetch_assoc()) {
                             oldcomment.setAttribute('type', 'text');
                             oldcomment.setAttribute('class', 'textbox');
                             oldcomment.setAttribute('value', review);
+                            oldcomment.setAttribute('style', "display:block; font-size:2em");
                             //new XMLSerializer().serializeToString(oldcomment);
 
                             document.getElementById('comments').appendChild(oldcomment);
-                            document.getElementById('comments').appendChild(label);
-                            //document.getElementById('comments').insertBefore(label, oldcomment);
+                            //document.getElementById('comments').appendChild(label);
+                            document.getElementById('comments').insertBefore(label, oldcomment);
                             document.getElementById('mycomment').value = '';
 
                             //var breakline = document.createElement("br");
@@ -169,7 +169,7 @@ while( $r = $comments->fetch_assoc()) {
         }
 
         function  gotoLogIn() {
-            window.location.href = "RegLoginUser.php?location=findMenu.php";
+            window.location.href = "RegLoginUser.php?location="+location;
             return true;
         }
 
@@ -257,6 +257,10 @@ while( $r = $comments->fetch_assoc()) {
             }
             document.getElementById('comments').style.pointerEvents = 'none';
         }
+        function firstpage() {
+            window.location.href = "firstpage.php";
+            return true;
+        }
 
     </script>
 </head>
@@ -264,11 +268,10 @@ while( $r = $comments->fetch_assoc()) {
 
     <center><img id="canteenpic" alt="Canteen Photo" height="5%" width="40%"></center>
     <div class="field-css" id="maindiv">
-        <fieldset><strong><center><legend id="lid" style="color:#051508; font-size: 2rem">Item
+        <strong><center><legend id="lid" style="color:#051508; font-size: 2rem">Item
                         Description</center></legend></strong>
         <div class="field-css">
 
-            <fieldset>
                 <center><table id="foodtable" class="tableclass">
                     <tr>
                         <th>Item Name</th>
@@ -278,18 +281,20 @@ while( $r = $comments->fetch_assoc()) {
                     </tr>
                 </table>
 
-                <div id="comments" style="pointer-events:none"></div>
+
+                <center><div id="comments" style="pointer-events:none"></div></center>
 
                 <div id="mycommmentdiv">
-                    <textarea id="mycomment" rows="6" cols="160" placeholder="Write a comment..."
-                              style="border: groove"></textarea>
+                    <center><textarea id="mycomment" rows="6" cols="130" placeholder="Write a comment..."
+                                      style="border: groove"></textarea></center>
                     <input type="button" class="buttonclass" id="SubmitComment" value="Enter"
                                onclick="setComment()">
-                </div></center>
-            </fieldset>
+                </div>
+
             <center><input type="button" class="buttonclass" id="LogInRedirection" value="Log in to see reviews"
                onclick="gotoLogIn()"></center>
-        </fieldset>
+                    <center><input type="button" class="buttonclass" id="Back" value="Back to Home!"
+                                   onclick="firstpage()"></center>
     </div>
     </div>
 

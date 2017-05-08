@@ -161,7 +161,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home" class="smoothScroll">HOME</a></li>
-                <li><a href="showNames.php" class="smoothScroll">RESTAURANTS</a></li>
+                <li><a href="showNames.php" class="smoothScroll">Canteens</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SignUp <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="about-us">

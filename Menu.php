@@ -36,7 +36,7 @@ else
             }
             else
             {
-                alert(name);
+                //alert(name);
                 return true;
             }
         }
@@ -68,14 +68,15 @@ else
                     //alert(myArray[i-1][j]);
                 }
             }
-            alert("OK");
+           // alert("OK");
 
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 console.log(xhttp.responseText);
                 if(this.status==200 && this.readyState==4)
                 {
-                    alert(xhttp.responseText);
+                   // alert(xhttp.responseText);
+                    window.location.href="firstpage.php";
                 }
             }
             xhttp.open("GET","addToMenu.php?data="+JSON.stringify(myArray)+"&len="+document.getElementById

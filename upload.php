@@ -5,8 +5,6 @@
 //if (isset($_POST["register"]))
 {
 
-    $imagename = $_POST['imagename'];
-    $imageid = $_POST['imageid'];
     $adminid = $_POST['adminid'];
     $canteenname = $_POST['canteenname'];
 
