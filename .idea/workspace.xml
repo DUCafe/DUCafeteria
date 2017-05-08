@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aafdc4d-289d-4976-844b-b3589e960523" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database.php" afterPath="$PROJECT_DIR$/Database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/CafeDetails.css" afterPath="$PROJECT_DIR$/css/CafeDetails.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/findMenu.php" afterPath="$PROJECT_DIR$/findMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firstpage.php" afterPath="$PROJECT_DIR$/firstpage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegLoginUser.php" afterPath="$PROJECT_DIR$/RegLoginUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/datalist.js" afterPath="$PROJECT_DIR$/js/datalist.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,23 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="findMenu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/findMenu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="96" column="1" lean-forward="false" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
-              <folding>
-                <marker date="1494182744380" expanded="true" signature="322:380" ph="SELECT cante... canteen" />
-                <marker date="1494182744380" expanded="true" signature="466:530" ph="SELECT cante... canteen" />
-                <marker date="1494182744380" expanded="true" signature="612:676" ph="SELECT cante... canteen" />
-                <marker date="1494182744380" expanded="true" signature="1004:1057" ph="SELECT locat... canteen" />
-                <marker date="1494182744380" expanded="true" signature="1239:1282" ph="SELECT * FRO... menu" />
-                <marker date="1494182744380" expanded="true" signature="1348:1394" ph="SELECT * FRO... comment" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="searchQuery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searchQuery.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,23 +39,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchCafe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchCafe.php">
+      <file leaf-file-name="session.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+            <state relative-caret-position="18">
+              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
               <folding>
-                <marker date="1493090917655" expanded="true" signature="297:318" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494058966987" expanded="true" signature="244:303" ph="SELECT usern... MYTABLE" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datalist.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegLoginCafe.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1944">
+              <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firstpage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="regUserDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regUserDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <marker date="1494144310642" expanded="true" signature="306:335" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494144310642" expanded="true" signature="306:351" ph="SELECT * FRO... regtable" />
+                <marker date="1494144310642" expanded="true" signature="452:473" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494144310642" expanded="true" signature="452:525" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494144310642" expanded="true" signature="452:526" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494144310642" expanded="true" signature="452:570" ph="SELECT * FRO... MYTABLE" />
+                <marker date="1494144310642" expanded="true" signature="722:818" ph="INSERT INTO MYTABLE... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegLoginUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkAdmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canteen.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canteen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datalist.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/datalist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -85,21 +132,11 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <marker date="1494151959341" expanded="true" signature="72:93" ph="SELECT * FRO... canteen" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -189,7 +226,6 @@
         <option value="$PROJECT_DIR$/js/MenuItem.php" />
         <option value="$PROJECT_DIR$/addComment.php" />
         <option value="$PROJECT_DIR$/welcome.php" />
-        <option value="$PROJECT_DIR$/js/datalist.js" />
         <option value="$PROJECT_DIR$/session.php" />
         <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/searchQuery.php" />
@@ -206,13 +242,14 @@
         <option value="$PROJECT_DIR$/Menu.php" />
         <option value="$PROJECT_DIR$/css/MenuItems.css" />
         <option value="$PROJECT_DIR$/css/style_firstpage.css" />
-        <option value="$PROJECT_DIR$/RegLoginUser.php" />
         <option value="$PROJECT_DIR$/login_design.php" />
         <option value="$PROJECT_DIR$/firstpage.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/CafeDetails.css" />
         <option value="$PROJECT_DIR$/findMenu.php" />
         <option value="$PROJECT_DIR$/Database.php" />
+        <option value="$PROJECT_DIR$/RegLoginUser.php" />
+        <option value="$PROJECT_DIR$/js/datalist.js" />
       </list>
     </option>
   </component>
@@ -481,12 +518,12 @@
       <workItem from="1494123395934" duration="38797000" />
       <workItem from="1494164359560" duration="14096000" />
       <workItem from="1494181121110" duration="2826000" />
-      <workItem from="1494203672389" duration="374000" />
+      <workItem from="1494203672389" duration="1724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352845000" />
+    <option name="totallyTimeSpent" value="354195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-95">
@@ -663,14 +693,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/searchCafe.js" />
     <entry file="file://$PROJECT_DIR$/CommonMenu.php" />
-    <entry file="file://$PROJECT_DIR$/canteen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -723,14 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/showNames.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -745,24 +759,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/regUserDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="116" column="60" lean-forward="true" selection-start-line="111" selection-start-column="27" selection-end-line="116" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/showNames.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <marker date="1494136294589" expanded="true" signature="345:366" ph="SELECT * FRO... canteen" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -820,6 +823,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="877">
           <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <marker date="1493648891476" expanded="true" signature="420:492" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1493648891476" expanded="true" signature="899:1053" ph="INSERT INTO MYTABLE... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,25 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="167" column="24" lean-forward="false" selection-start-line="167" selection-start-column="24" selection-end-line="167" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login_design.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstpage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -881,6 +873,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
           <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,13 +892,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searchQuery.php">
+    <entry file="file://$PROJECT_DIR$/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1494062583720" expanded="true" signature="191:248" ph="SELECT * FRO... canteen" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -919,28 +910,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/datalist.js">
+    <entry file="file://$PROJECT_DIR$/searchQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1494062583720" expanded="true" signature="191:248" ph="SELECT * FRO... canteen" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding>
+            <marker date="1494058966987" expanded="true" signature="244:303" ph="SELECT usern... MYTABLE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canteen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="112" column="4" lean-forward="false" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="101" column="66" lean-forward="true" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regUserDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1494144310642" expanded="true" signature="306:335" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1494144310642" expanded="true" signature="306:351" ph="SELECT * FRO... regtable" />
+            <marker date="1494144310642" expanded="true" signature="452:473" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1494144310642" expanded="true" signature="452:525" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1494144310642" expanded="true" signature="452:526" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1494144310642" expanded="true" signature="452:570" ph="SELECT * FRO... MYTABLE" />
+            <marker date="1494144310642" expanded="true" signature="722:818" ph="INSERT INTO MYTABLE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegLoginCafe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegLoginUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
             <marker date="1494151959341" expanded="true" signature="72:93" ph="SELECT * FRO... canteen" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database.php">
+    <entry file="file://$PROJECT_DIR$/js/datalist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="234">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding />
         </state>
       </provider>

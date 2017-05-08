@@ -171,10 +171,10 @@ $db->close();*/
                         if(String(response1.trim()) === "Success") {
 
                             var location = window.location.href;
-                            alert(location);
+                            //alert(location);
                             location = location.substring(location.lastIndexOf('=')+1);
                             window.location.href = location;
-                            alert(location);
+                            //alert(location);
                         }
                     }
                 }
