@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "ducafe";
-$password = "ducafe_db";
+$username = "root";
+$password = "csedu";
 $dbname = "ducafe";
 
 /*$servername = "localhost";

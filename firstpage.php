@@ -80,7 +80,7 @@
         {
 
             var name = document.getElementById("search").value;
-            alert(name);
+            //alert(name);
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function ()
             {
@@ -106,7 +106,7 @@
 
         function isAdmin() {
             var name = '<?php echo "$name"?>';
-            alert(name);
+            //alert(name);
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if(this.status == 200 && this.readyState == 4){

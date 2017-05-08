@@ -28,12 +28,9 @@ if($id == 2)
 {
     $canteenname = $_GET['canteenname'];
     $retrieve_query = "SELECT canteenid FROM canteen where canteenname = '$canteenname'" ;
-
-    $retrieve_location = "SELECT location FROM canteen where canteenid = '$cid'" ;
-    $location = $db->query($retrieve_location);
-    $location = $location->fetch_assoc();
-    $location = $location['location'];
 }
+
+
 
 /*else
 {
@@ -52,6 +49,16 @@ $result = $db->query($retrieve_query);
 
 $cid = $result->fetch_assoc();
 $cid = $cid['canteenid'];
+
+if($id==2)
+{
+    $retrieve_location = "SELECT location FROM canteen where canteenid = '$cid'" ;
+    $location = $db->query($retrieve_location);
+    $location = $location->fetch_assoc();
+    $location = $location['location'];
+
+   // echo "$location";
+}
 
 
 
@@ -163,6 +170,7 @@ while( $r = $comments->fetch_assoc()) {
 
         function  gotoLogIn() {
             window.location.href = "RegLoginUser.php?location=findMenu.php";
+            return true;
         }
 
         function getData() {
@@ -177,7 +185,7 @@ while( $r = $comments->fetch_assoc()) {
 
 
             var location = '<?php echo "$location"?>';
-            alert(location);
+           // alert(location);
             //location = String(location).trim();
             document.getElementById('canteenpic').src = location;
             //alert(location);

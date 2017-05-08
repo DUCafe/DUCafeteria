@@ -23,13 +23,12 @@
     display: inline-block;
     row-span: 3;
     font-size: 8rem;
-    column-span: 50;
     background: #eeffae;
     border: 1px solid #2c3749;
     border-radius: 1px;
     color: #051508;
     height:5px;
-    width:60%;
+    width:100%;
     font-size: 1em;
     font-weight: 600;
     text-align: match-parent;
@@ -39,6 +38,7 @@
     font-size: 1em;
     display: inline-block;
     padding-top: 10%;
+    width:80%;
     border: 1px solid #2c3749;
     padding: 5% 5% 5% 5%;
     background: #eeffae;
