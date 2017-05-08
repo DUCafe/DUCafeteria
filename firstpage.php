@@ -204,7 +204,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
+
+
+                <h1 style="font-size: 2rem; color:WHITE">(Student)UserID : hosneara<br>Password : 12345<br><br>(Admin)
+                    UserID :
+                    rumaly21<br>Password :
+                    123</h1>
                 <h1>DU CAFETERIAS</h1>
+
+
 
                 <!--<h2>CLEAN &amp; SIMPLE DESIGN</h2> -->
                 <!--<a href="#gallery" class="smoothScroll btn btn-default">LEARN MORE</a>-->
