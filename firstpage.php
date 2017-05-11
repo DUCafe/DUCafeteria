@@ -39,6 +39,8 @@
                     var response = JSON.parse(xhttp.responseText);
                     var command;
 
+                    alert(response);
+
                     response.forEach(function (item)
                     {
                         item = String(item).trim();
@@ -54,7 +56,6 @@
                             'onclick=' + path + '></a>';
                         command += '</div>';
 
-                        alert(command);
 
                         var div = document.createElement('div');
                         div.innerHTML = command;
