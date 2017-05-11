@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "csedu";
+$password = "ducafe_db";
 $dbname = "ducafe";
 
 

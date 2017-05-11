@@ -29,31 +29,30 @@
 
         GetImageFromDB();
 
-        function GetImageFromDB() {
+        function GetImageFromDB()
+        {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function ()
             {
                 if(this.status == 200 && this.readyState == 4)
                 {
                     var response = JSON.parse(xhttp.responseText);
-                    //alert(response);
+                    var command;
 
-                    response.forEach(function (item) {
-
+                    response.forEach(function (item)
+                    {
                         item = String(item).trim();
                         //alert(item);
 
                         var path = '"goto(\'' + item +'\')" ';
                         var location = "findMenu.php?location=" + item + "&id=" + "1";
 
-                        //alert(path);
-                        //alert(location);
-
-                        var command ='<a href=' + location +'  data-lightbox-gallery="zenda-gallery"><img src="'+item
-                            +'" ' +
+                        command = '<div class="col-md-4 col-sm-4 wow fadeInUp">';
+                        command += '<a href=' + location + '  data-lightbox-gallery="zenda-gallery"><img src="' +
+                            item + '" ' + ' width=100% height="300" ' +
                             ' alt="gallery img" ' +
                             'onclick=' + path + '></a>';
-                       // alert(command);
+                        command += '</div>';
 
                         var div = document.createElement('div');
                         div.innerHTML = command;
@@ -255,7 +254,7 @@
                 <h1 class="heading">Food Gallery</h1>
                 <hr>
             </div>
-
+        </div>
 
             <!--<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
                 <a href="findMenu.php?location='images/modhu.jpg'" data-lightbox-gallery="zenda-gallery"><img
@@ -293,7 +292,7 @@
                     <span>Pasta / Rosemary / Green</span>
                 </div>
             </div>-->
-        </div>
+
     </div>
 </section>
 
