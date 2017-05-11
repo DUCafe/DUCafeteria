@@ -45,14 +45,16 @@
                         //alert(item);
 
                         var path = '"goto(\'' + item +'\')" ';
-                        var location = "findMenu.php?location=" + item + "&id=" + "1";
+                        var location = 'findMenu.php?location="' + item + '" &id=1';
 
                         command = '<div class="col-md-4 col-sm-4 wow fadeInUp">';
-                        command += '<a href=' + location + '  data-lightbox-gallery="zenda-gallery"><img src="' +
+                        command += '<a href="' + location + '"  data-lightbox-gallery="zenda-gallery"><img src="' +
                             item + '" ' + ' width=100% height="300" ' +
                             ' alt="gallery img" ' +
                             'onclick=' + path + '></a>';
                         command += '</div>';
+
+                        alert(command);
 
                         var div = document.createElement('div');
                         div.innerHTML = command;
