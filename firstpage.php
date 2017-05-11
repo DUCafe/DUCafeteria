@@ -39,7 +39,7 @@
                     var response = JSON.parse(xhttp.responseText);
                     var command;
 
-                    alert(response);
+                    //alert(response);
 
                     response.forEach(function (item)
                     {
