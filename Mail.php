@@ -21,8 +21,8 @@ Please click this link to activate your account:.
 '.$address;
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-->setUsername('hosneara1720@gmail.com')
-->setPassword('livelaughlove')
+->setUsername('hosneara06@gmail.com')
+->setPassword('420420420')
 ->setEncryption('ssl');
 
 $mailer = Swift_Mailer::newInstance($transport);
