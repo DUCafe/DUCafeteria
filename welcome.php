@@ -26,7 +26,7 @@
     </style>
     <body>
         <div class="my-block">
-            <p>Search Completed</p>
+            <p>Completed</p>
         </div>
     </body>
 </head>
