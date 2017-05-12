@@ -1,13 +1,3 @@
-<?php
-session_start();
-$name;
-if(!isset($_SESSION['login_user']))
-{
-    $name = 'nothing';
-}
-else
-    $name = $_SESSION['login_user'];
-?>
 <!Doctype html>
 <head>
 

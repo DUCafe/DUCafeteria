@@ -47,14 +47,16 @@
                         //alert(item);
 
                         var path = '"goto(\'' + item +'\')" ';
-                        var location = 'findMenu.php?location="' + item + '" &id=1';
+                        var location = 'findMenu.php?location=' + item + '&id=1';
 
                         command = '<div class="col-md-4 col-sm-4 wow fadeInUp">';
                         command += '<a href="' + location + '"  data-lightbox-gallery="zenda-gallery"><img src="' +
-                            item + '" ' + ' width=100% height="300" ' +
+                            item + '" ' + ' width:100% height:300 ' +
                             ' alt="gallery img" ' +
                             'onclick=' + path + '></a>';
                         command += '</div>';
+
+                        //alert(command);
 
 
                         var div = document.createElement('div');
@@ -74,7 +76,7 @@
             ///alert(location);
             //location.reload(true);
             //alert(window.location.href);
-            window.location.href = "findMenu.php?location="+location+"&id=" +'1';
+            window.location.href = 'findMenu.php?location='+location+'&id=1';
             return true;
         }
 
@@ -108,6 +110,14 @@
 
         function isAdmin() {
             var name = '<?php echo "$name"?>';
+
+            var flag = 0;
+            if(name === 'nothing')
+            {
+                document.getElementById('logout').style.display='none';
+            }
+            else flag = 1;
+
             //alert(name);
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -117,6 +127,9 @@
                     {
                         //alert(response);
                         document.getElementById('update').style.display = 'none';
+                    }
+                    else if(flag === 0){
+                        document.getElementById('logout').style.display='block';
                     }
                 }
             }
@@ -185,7 +198,7 @@
 
 
                 <!--<li><a href="RegLoginUser.php" class="smoothScroll">Log In</a></li>-->
-                <li><a href="logout.php" class="smoothSroll">Log Out</a></li>
+                <li id="logout"><a href="logout.php" class="smoothSroll">Log Out</a></li>
                 <li id="update"><a href="Menu.php" class="smoothScroll">Update Menu</a></li>
 
             </ul>
