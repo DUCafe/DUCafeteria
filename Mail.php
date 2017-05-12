@@ -7,7 +7,7 @@ $name = "hosneara";
 require_once 'lib/swift_required.php';
 
 $subject = 'DUCafe Signup | Verification'; // Give the email a subject
-$address="http://103.28.121.126/ducafe/verify?email=".$email."&hash=".$id;
+$address="http://103.28.121.126/ducafe/welcome.php";
 $body = '
 
 Thanks for signing up!

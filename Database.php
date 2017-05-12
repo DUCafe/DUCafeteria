@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
+$username = "ducafe";
 $password = "ducafe_db";
 $dbname = "ducafe";
 
