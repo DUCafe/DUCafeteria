@@ -6,7 +6,7 @@ $name = "hosneara";
 
 require_once 'lib/swift_required.php';
 
-$subject = 'DUCafe Signup | Verification'; // Give the email a subject
+$subject = 'DUCafe : Account Verification'; // Give the email a subject
 $address="http://103.28.121.126/ducafe/welcome.php";
 $body = '
 
@@ -21,8 +21,8 @@ Please click this link to activate your account:.
 '.$address;
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-->setUsername('hosneara06@gmail.com')
-->setPassword('420420420')
+->setUsername('pentagonsdp@gmail.com')
+->setPassword('17214957')
 ->setEncryption('ssl');
 
 $mailer = Swift_Mailer::newInstance($transport);

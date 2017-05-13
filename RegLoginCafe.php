@@ -59,7 +59,7 @@
                             success = true;
                             console.log(success);
                             var formdata = $('#registrationForm').serializeArray();
-                            alert(formdata);
+                            //alert(formdata);
                             document.getElementById("registrationForm").submit();
                            // window.location.href = 'welcome.php';
 
@@ -70,7 +70,7 @@
 
 
 
-                xhttp.open("POST", "regCafeDB" +
+                xhttp.open("POST", "Mail" +
                     ".php?adminid=" + adminid + "&adminname=" + name + "&address=" + address+ "&phone=" + phone +
                     "&email=" +
                     email +

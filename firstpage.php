@@ -157,6 +157,41 @@
 </head>
 <body onload="isAdmin()">
 
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '454475178279122',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();">
+    </fb:login-button>
+
+</script>
+
 <!-- preloader section -->
 <section class="preloader">
     <div class="sk-spinner sk-spinner-pulse"></div>
@@ -200,6 +235,8 @@
                 <!--<li><a href="RegLoginUser.php" class="smoothScroll">Log In</a></li>-->
                 <li id="logout"><a href="logout.php" class="smoothSroll">Log Out</a></li>
                 <li id="update"><a href="Menu.php" class="smoothScroll">Update Menu</a></li>
+
+                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
             </ul>
 
